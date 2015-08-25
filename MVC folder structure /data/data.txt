@@ -1,0 +1,1 @@
+This directory provides a place to store application data that is volatile and possibly temporary. The disturbance of data in this directory might cause the application to fail.
