@@ -22,19 +22,43 @@ $GLOBALS['config'] = array(
 //spl_autoload_register(function($class){
 //	require_once 'classes/' . $class . '.php';
 //});
+
 spl_autoload_register(function($classname){
 //function autoloadModel($classname){
+	
 	$filename ='../models/' . $classname .'.php';
 	if(file_exists($filename)){
 		require $filename;
 		}
 	});
-spl_autoload_register(function($classname){	
-//function autoloadController($classname){
-	$filename= '../controllers/' . $classname . '.php';
+spl_autoload_register(function($classname11){
+//function autoloadModel($classname){
 	
-	if(file_exists($filename)){
-		require $filename;
+	$filename11 ='../controllers/' . $classname11 .'.php';
+	if(file_exists($filename11)){
+		require $filename11;
+		}
+	});
+spl_autoload_register(function($classname1){
+//function autoloadModel($classname){
+	
+	$filename1 ='../../models/' . $classname1 .'.php';
+	if(file_exists($filename1)){
+		require $filename1;
+		}
+	});
+spl_autoload_register(function($classname2){	
+//function autoloadController($classname){
+	$filename2= '../../controllers/' . $classname2 . '.php';
+	
+	if(file_exists($filename2)){
+		require $filename2;
+		}
+	});
+spl_autoload_register(function($classname3){
+	$filename3='../views/' . $classname3 . 'php';
+	if(file_exists($filename3)){
+		require $filename3;
 		}
 	});
 	

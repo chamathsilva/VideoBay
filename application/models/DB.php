@@ -1,5 +1,5 @@
 <?php
-require_once '../configs/core/init.php';
+
 
 class DB{
 	private static $_instance = null;

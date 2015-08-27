@@ -1,5 +1,5 @@
 <?php
-require_once '../configs/core/init.php';
+
 class User{
 	private $db,
 			$_data,
@@ -126,3 +126,5 @@ class User{
 		return $this->_isLoggedIn;
 		}
 	}
+	
+	
