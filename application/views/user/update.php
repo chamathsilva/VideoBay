@@ -2,7 +2,7 @@
 require_once '/../../configs/core/init.php';
 $user =new User();
 if(!$user->isLoggedIn()){
-	redirect::to('index.php');
+	redirect::to('../index.php');
 	
 	}
 	
@@ -35,7 +35,7 @@ if(Input::exists()){
 				
 				));
 				Session::flash('home','Your details have been updated');
-				redirect::to('index.php');
+				redirect::to('../index.php');
 				
 				}catch(Exception $e){
 					die($e->getMessage());
