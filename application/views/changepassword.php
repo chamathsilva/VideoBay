@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '../configs/core/init.php';
 $user =new User();
 if(!$user->isLoggedIn()){
 	redirect::to('index.php');

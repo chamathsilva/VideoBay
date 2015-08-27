@@ -19,11 +19,31 @@ $GLOBALS['config'] = array(
 
 );
 
-spl_autoload_register(function($class){
-	require_once 'classes/' . $class . '.php';
-});
+//spl_autoload_register(function($class){
+//	require_once 'classes/' . $class . '.php';
+//});
+spl_autoload_register(function($classname){
+//function autoloadModel($classname){
+	$filename ='../models/' . $classname .'.php';
+	if(file_exists($filename)){
+		require $filename;
+		}
+	});
+spl_autoload_register(function($classname){	
+//function autoloadController($classname){
+	$filename= '../controllers/' . $classname . '.php';
+	
+	if(file_exists($filename)){
+		require $filename;
+		}
+	});
+	
+//spl_autoload_register("autoloadModel");
+//spl_autoload_register("autoloadController");
+	
+	
 
-require_once 'functions/sanitize.php';
+require_once '/../../controllers/functions/sanitize.php';
 
 if(cookie::exists(config::get('remember/cookie_name')) && !Session::exists(config::get('session/session_name'))){
 	
