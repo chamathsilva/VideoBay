@@ -1,94 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
 
-			
-				 
-				<div class="modal fade" id="register" role="dialog" style="border-radius:10px" >
-					<div class="modal-dialog" >
-	
-						<div class="modal-content" style="font-style:normal; color:white;" >
-						
-							<div class="modal-header" style="background-color:#2a4d6d;">
-							  <button type="button" class="close" data-dismiss="modal">&times;</button>
-							  <h4 class="modal-title" >REGISTER FOR MORE LESSONS</h4>
-							</div>
-							
-							<div class="modal-body" style="font-size:16px; font-weight:10; background-color:#2a4d6d;">
-							  <form class="form-horizontal" role="form" >
-								
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="Firstname">First name : </label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="username" class="form-control" id="username" placeholder="First name">
-									</div>
-								</div>
-							
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="lastname">Last name :</label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="username" class="form-control" id="username" placeholder="Second name">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="email" >Email :</label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="email" class="form-control" id="email" placeholder="Enter email">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="username" >Username : </label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="text" class="form-control" id="email" placeholder="Enter username" >
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="password1" >Password : </label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="password" class="form-control" id="psw" placeholder="Enter Password">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="control-label col-sm-3 col-xs-11" style="font-weight:normal" for="password2" >Confirm password : </label>
-									<div class="col-sm-7 col-xs-9 col-xs-offset-1">
-									<input type="password" class="form-control" id="psw" placeholder="Re-enter Password">
-									</div>
-								</div>
+    <head>
 
-							</div>
-							
-							<div class="modal-footer" style=" background-color:#2a4d6d;">
-								<button type="button" class="btn btn-large btn-success col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3 " data-dismiss="modal"><strong>Register Now</strong></button>
-							</div>
-						  
-						</div>
-					  
-					</div>
-				</div>
-				  
-			
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UCSC VideoBay</title>
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../public/css/form-elements.css">
+        <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
+
+    </head>
+    <body>
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 text ">
+                            <h1><strong>UCSC VideoBay</strong></h1>
+                            <div class="description">
+                                <p>
+                                    This is a free responsive registration form made with Bootstrap. 
+                                    Download it on  customize and use it as you like!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Sign up now</h3>
+                                    <p>Fill in the form below to get instant access:</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form role="form" action="" method="post" class="registration-form">
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-first-name">First name</label>
+                                        <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-last-name">Last name</label>
+                                        <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-email">Email</label>
+                                        <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-about-yourself">About yourself</label>
+                                        <textarea name="form-about-yourself" placeholder="About yourself..." 
+                                                    class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn">Sign me up!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

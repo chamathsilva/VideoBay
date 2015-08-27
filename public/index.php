@@ -1,35 +1,3 @@
-<?php 
-# Start Session:
-
-session_start();
-
-?>
-
-<?php
-
-	if($_POST){
-		$q = "SELECT * FROM users WHERE email = '$_POST[email]' AND password = '$_POST[password]'";
-		$r = mysqli_query($dbc, $q);
-		$num = mysqli_num_rows($r);
-		
-		if ($num == 1){
-			$_SESSION['username'] = $_POST['email'];
-			$data = mysqli_fetch_assoc($r);
-			$user_type =  $data['user_type'];
-			if($user_type==0){
-				header('location: admin/index.php');
-			}
-			else{
-				header('location: front/user_home.php');
-			}	
-		}
-		else{
-			echo "User name or password invalid";
-		}
-	} 
-
-?>
-
 <!DOCTYPE html>
 <html>  
 	<head>
