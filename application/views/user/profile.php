@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '/../../configs/core/init.php';
 
 if(!$username = Input::get('user')){
 	redirect::to('index.php');
