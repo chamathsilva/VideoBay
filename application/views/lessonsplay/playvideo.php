@@ -4,14 +4,14 @@
 		
 		
 		
-		<?php include('../../config/docs.php');?>
+		<?php include('../includes/docs.php');?>
 		
 		
  
 	
 	</head>
 	<body>
-			<?php include ('../User/user_header.php');?>
+			<?php include ('../user/user_header.php');?>
 			 
 			
 			
@@ -19,7 +19,7 @@
 			
 				
 					<div class="col-md-12" >
-						<?php include ('../User/videoname.php');?>
+						<?php include ('../user/videoname.php');?>
 					</div>
 					
 					<div class="col-md-6">
@@ -38,18 +38,18 @@
 			
 			
 			<div class ="col-md-12">				
-				<?php include ('../User/slides_navigator.php');?>
+				<?php include ('../user/slides_navigator.php');?>
 			</div>
 			<div class ="col-md-6">
-				<?php include ('../User/comments.php');?>
+				<?php include ('../user/comments.php');?>
 			</div>
 		
 			<div class ="col-md-6">
-				<?php include ('../User/recommendations.php');?>
+				<?php include ('../user/recommendations.php');?>
 			</div>
 			</div>
 			
-			<?php include('../../config/js.php');?>
-			<?php include ('../User/footer.php');?>
+			<?php include('../includes/js.php');?>
+			<?php include ('../includes/footer.php');?>
 	</body>
 	</html>

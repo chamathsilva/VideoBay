@@ -2,16 +2,16 @@
 <html>  
 	<head>
 		
-		<?php include('../../config/docs.php');?>
+		<?php include('../includes/docs.php');?>
 	
 	</head>
 	
 	<body>
-			<?php include ('../User/user_header.php');?>
+			<?php include ('../user/user_header.php');?>
 			
 		<div class="row">
 			<div class= "container-fluid col-md-offset-8">
-				<?php include ('../User/Advertisements.php'); ?>
+				<?php include ('../user/Advertisements.php'); ?>
 		
 			</div>
 			<div class= "container-fluid">
@@ -121,8 +121,8 @@
 			
 			
 			
-			<?php include ('../User/footer.php');?>
-			<?php include('../../config/js.php');?>
+			<!-- <?php include ('../includes/footer.php');?> -->
+			<?php include('../includes/js.php');?>
 			
 	
 	</body>

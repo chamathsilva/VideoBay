@@ -36,14 +36,14 @@ session_start();
 		
 		
 		
-		<?php include('config/docs.php');?>
+		<?php include('../application/views/includes/docs.php');?>
 		
 	
 		
 
 	</head>
 	<body>
-		<?php include ('template/User/home_header.php'); ?>
+		<?php include ('../application/views/user/home_header.php'); ?>
 		
 	
 		<section class="hero">
@@ -65,20 +65,20 @@ session_start();
 						<br>
   						<a class="btn btn-large btn-success" data-toggle="modal" data-target="#register"><strong>Register </strong><br> Now</a>
 					</div>
-						 <?php include('template/Interfaces/registration.php');?>
+						 <?php include('../application/views/registration/registration.php');?>
 				</div>
 			</div>
 			</div>
 			
 			<div class ="col-md-12">
-				<?php include ('template/User/slidesnavigator.php');?>
+				<?php include ('../application/views/user/video_navigator.php');?>
 			</div>
 		</section>
 		
 		
-		<?php include ('template/User/footer.php'); ?>
+		<?php include ('../application/views/includes/footer.php'); ?>
 		
-		<?php include('config/js.php');?>
+		<?php include('../application/views/includes/js.php');?>
 		
 	</body>
 	
