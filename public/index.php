@@ -60,9 +60,9 @@ session_start();
   				
 				<div class="col-md-6 col-xs-12">
   					<div class="inner" width = "300px" height ="400px" ><br>
-  						<?php echo 'The difference between school and life? In school, you’re taught a lesson and then given a test. In life, you’re given a test that teaches you a lessons.<br><div class = "pull-right>"<br> -<i>Tom Bodett</></ i><br>'; ?>
+  						<?php echo 'The difference between school and life? In school, you’re taught a lesson and then given a test. In life, you’re given a test that teaches you a lessons.<br><div class = "pull-right>"<br> -<i>Tom Bodett</></ i>'; ?>
 						<br>
-						<br>
+						
   						<a class="btn btn-large btn-success" data-toggle="modal" data-target="#register"><strong>Register </strong><br> Now</a>
 					</div>
 						 <?php include('../application/views/registration/registration.php');?>
