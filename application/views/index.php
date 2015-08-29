@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../../public/css/colorbox.css" />
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
 
 
     </head>
@@ -73,11 +73,18 @@ Academic Earth was launched on the premise that
      
                         </div>
                     </div>
-            
+
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../public/js/ucscvideobay.js"></script>
         <script src="../../public/js/jquery.colorbox.js"></script>
+
+        
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+        <script src="../../public/js/validation.js"></script>
+
+
 
     </body>
 </html>

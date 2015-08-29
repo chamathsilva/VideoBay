@@ -63,6 +63,7 @@ $(function(){
 				nowhitespace: true,
 				lettersonly: true
 			},
+
 			lastName:{
 				required: true,
 				nowhitespace: true,
@@ -77,7 +78,12 @@ $(function(){
 			email: {
 				required: 'Please enter an email address.',
 				email:'Please enter a <em>valid</em> email address.'
-			}
+			},
+		password2: {
+				equalTo: "Please enter the same password again."
+			},
+
+
 		}
 	})
 });
