@@ -15,8 +15,26 @@
         <link rel="stylesheet" href="../../../public/css/form-elements.css">
         <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("#signup").click(function(){
+        $("#login").hide();
+        return false;
+    });
+    $("#signup").click(function(){
+        $("#registration").show();
+        return false;
+    });
+});
+</script>
+
     </head>
     <body>
+
+        <?php include 'navbar.php' ?>
         <!-- Top content -->
         <div class="top-content">
             <div class="inner-bg">
@@ -26,48 +44,30 @@
                             <h1><strong>UCSC VideoBay</strong></h1>
                             <div class="description">
                                 <p>
-                                    This is a free responsive registration form made with Bootstrap. 
-                                    Download it on  customize and use it as you like!
+                                    Rethink Education
+Academic Earth was launched on the premise that
+ everyone deserves access to a world-class education. 
+ In 2009, we built the first collection of free online 
+ college courses from the world’s top universities. The world of 
+ open education has exploded since then, so today our curated lists 
+ of online courses are hand selected by our staff to show you the
+  very best offerings by subject area. We also make sure there is 
+  something for everyone: whether you want to explore a new topic or 
+  advance in your current field, we bring the amazing world of academia to you for free.
                                 </p>
+
+                                <button class="show-video">Watch the Video</button>
                             </div>
                         </div>
-                        <div class="col-sm-5 form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Sign up now</h3>
-                                    <p>Fill in the form below to get instant access:</p>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-pencil"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="registration-form">
 
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-first-name">First name</label>
-                                        <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                                    </div>
+                        <div id = "login" class="col-sm-5 form-box">
+                            <?php include 'loginform.php' ?>
+                        </div>
 
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-last-name">Last name</label>
-                                        <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-                                    </div>
+                        <div id = "registration" class="col-sm-5 form-box">
+                            <?php include 'registrationform.php' ?>
+                        </div>
 
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-email">Email</label>
-                                        <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-about-yourself">About yourself</label>
-                                        <textarea name="form-about-yourself" placeholder="About yourself..." 
-                                                    class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-                                    </div>
-
-                                    <button type="submit" class="btn">Sign me up!</button>
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </div>

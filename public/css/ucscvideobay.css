@@ -1,178 +1,29 @@
-
-.site-header{
-
-    background-color: #F4F3F0;
-    border-bottom: 5px solid #00B4CC;
-    height: 65px;
-    padding: 0px 20px;
+body {
+    background-color:  #7dcbf2;
+    height: 100%;
 }
 
-.site-wrapper{
-    max-width: 1010px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 10px;
-
+/***** Top content *****/
+.form-box2{
+    margin-top: 100px
 }
-
-.site-nav{
-    float: left;
-    text-transform: uppercase;
-    width: 100%;
-    min-width: 660px;
-}
-
-.nav{
-    text-align: left;
-}
-
-.home-link {
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0) url("/images/logo.png") no-repeat scroll 0px 22px / 187px auto;
-    display: block;
-    font-size: 26px;
-    float: left;
-    height: 60px;
-    padding: 17px 10px 10px;
-    text-transform: capitalize;
-    width: 187px;
-}
-
-
-/* ----- midle part-------- */
-
-
-body{
-    background:#294072;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.form{
-    width:400px;
-    margin:0 auto;
-    background:#1C2B4A;
-    margin-top:70px;
-    margin-right:30px;
-}
-.header{
-    height:44px;
-    background:#17233B;
-}
-.header h2{
-    height:44px;
-    line-height:44px;
-    color:#fff;
-    text-align:center;
-}
-.login{
-    padding:0 10px
-}
-.login span.un{
-    width:10%;
-    text-align:center;
-    color:#0C6;
-    border-radius:3px 0 0 3px;
-}
-.text{
-    background:#12192C;
-    width:90%; border-radius:0 3px 3px 0;
-    border:none; outline:none; color:#999;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.text,.login span.un{
-    display:inline-block;
-    vertical-align:top;
-    height:40px; line-height:40px;
-    background:#12192C;
-}
-
-.btn{
-    height:40px;
-    border:none;
-    background:#0C6;
-    width:100%;
-    outline:none;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:20px;
-    font-weight:bold;
-    color:#eee;
-    border-bottom:solid 3px #093;
-    border-radius:3px;
-    cursor:pointer''
-}
-ul li{
-    height:40px;
-    margin:15px 0;
-    list-style:none;
-}
-.span{
-    display:table;
-    width:100%;
-    font-size:14px;
-}
-.ch{
-    display:inline-block;
-    width:50%;
-    color:#CCC;
-}
-.ch a{
-    color:#CCC;
-    text-decoration:none;
-}
-.ch:nth-child(2){
-    text-align:right;
-}
-/*bottom*/
-.sign{
-    width:90%;
-    padding:0 5%;
-    height:50px;
-    display:table;
-    background:#17233B;
-}
-.sign div{
-    display:inline-block;
-    width:50%;
-    line-height:50px;
-    color:#ccc;
-    font-size:14px;
-}
-.up{
-    text-align:right;
-}
-.up a{
-    display:block;
-    background:#096;
-    text-align:center;
-    height:35px;
-    line-height:35px;
-    width:50%;
-    font-size:16px;
-    text-decoration:none;
-    color:#eee;
-    border-bottom:solid 3px #006633;
-    border-radius:3px;
-    font-weight:bold;
-    margin-left:75%;
-}
-@media(max-width:480px){ .form{width:100%}}
->>>>>>> a94277d24ad84358bd69c02851313cd509950dc2
-
 
 
 /***** Top content *****/
 .inner-bg {
     padding: 120px 0 170px 0;
+    background-color: #525453;
 }
 
 .top-content .text {
     padding-top: 120px;
     text-align: center;
-    color: #f78f;
+    color: #fff;
 
 }
 
-.top-content .text h1 { color: #fasff; }
-.top-content .text p { text-align: left;}
+.top-content .text h1 { color: #fff; }
+.top-content .text p { text-align: justify;}
 
 .top-content .description {
     margin: 20px 0 10px 0;
@@ -181,8 +32,8 @@ ul li{
 
 .form-top {
     overflow: hidden;
-    padding: 0 25px 15px 25px;
-    background: #fff;
+    padding: 0 25px 0px 25px;
+    background: #7dcbf2;
     -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
     text-align: left;
 }
@@ -206,19 +57,59 @@ ul li{
 }
 
 .form-bottom {
-    padding: 25px 25px 30px 25px;
+    padding: 25px 25px 20px 25px;
     background: #eee;
     -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
     text-align: left;
 }
 
-.form-bottom form .input-error {
+<div class=​"form-group">​…​</div>​.form-bottom form .input-error {
     border-color: #19b9e7;
 }
 
+/***** button style *****/
+button.btn {
+    height: 50px;
+    width: 100px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #19b9e7;
+    border: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    text-shadow: none;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+button.btn.full{ 
+    width: 100%;
+}
+
+
+.show-video{
+    -webkit-appearance: none;
+    border: none;
+    background: transparent url("../../public/images/icon_watch.png") no-repeat 50% 2px;
+    color: #fff;
+    font-size: 12px;
+    padding-top: 90px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+
+}
+
+.show-video:hover{
+    background-image:url("../../public/images/icon_watch-active.png")
+}
 
 /***** Media queries *****/
-
+.show-video:focus{outline:none}
 
 @media (min-width: 992px) and (max-width: 1199px) {}
 
@@ -237,4 +128,94 @@ ul li{
     h1, h2 { font-size: 32px; }
 
 }
+
+/* NAVBAR STYLE */
+
+
+.navbar-inverse .navbar-nav > li > a {
+color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+color: #FFF;
+}
+
+
+/* ADDED PADDING IN NAVBAR */
+
+
+.navbar {
+    padding:15px;
+     -webkit-transition: background .8s ease-out,padding .8s ease-out;
+        -moz-transition: background .8s ease-out,padding .8s ease-out;
+        transition: background .8s ease-out,padding .8s ease-out;
+}
+
+
+/* CLASS FOR REMOVING PADDING IN NAVBAR*/
+
+
+.navbar-pad-original {
+      padding:0px;
+}
+
+.navbar-inverse {
+    background-color: #7dcbf2;
+    border-color: #1E51FF;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: skyblue;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(26, 171, 188, 0.36);
+}
+
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: rgba(28, 114, 255, 0.29);
+    boder-radius: 5px ;
+}
+
+
+/* CLASS FOR INSIDE SCROLL BAR*/
+
+.container-scroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+.Middle {
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+
+.Middle {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 500px;
+}
+
+
+
+
+
+
 
