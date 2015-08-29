@@ -8,16 +8,16 @@
                                 </div>
                             </div>
                             <div id = "sign-up-form"class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form id = "login-form" role="form" action="" method="post" class="login-form">
 
                                     <div class="form-group">
                                         <label class="sr-only" for="form-first-name">User name</label>
-                                        <input type="text" name="form-first-name" placeholder="User name" class="form-first-name form-control" id="form-first-name">
+                                        <input type="text" name="username" placeholder="User name" class="form-first-name form-control" id="form-first-name">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="sr-only" for="form-last-name">Password</label>
-                                        <input type="text" name="form-last-name" placeholder="Password" class="form-last-name form-control" id="form-last-name">
+                                        <input type="text" name="password" placeholder="Password" class="form-last-name form-control" id="form-last-name">
                                     </div>
 
                                     <div class="row">
