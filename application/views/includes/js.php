@@ -1,8 +1,8 @@
 <!-- JQuery -->
  
- <script src="../../../library/Jquery/jquery.js"></script> 
-<script src="../library/Jquery/jquery.js"></script> 
+ <script src="../../bootstrap-3.3.4-dist/js/jquery.min.js"></script> 
+<script src="bootstrap-3.3.4-dist/js/jquery.min.js"></script> 
 <!-- Latest compiled and minified JavaScript --> 
 
-  <script src="../../../library/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-  <script src="../library/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="../../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>

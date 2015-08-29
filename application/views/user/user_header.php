@@ -3,7 +3,7 @@
 		<div class="row">
   			
 			<div class="col-md-2 ">
-  				<img class="img-responsive" src="../../../public/images/logo.png"  width="250" height="auto"> 
+  				<img class="img-responsive" src="../../Images/logo.png"  width="250" height="auto"> 
   			</div>
 				
 			
@@ -25,11 +25,12 @@
 				</form>		
 					
 				</div>	
-		</div>	
+			</div>	
 						
 			
 		
 			
 		
-	</div>			
+		</div>			
+	</div>
 </div>
