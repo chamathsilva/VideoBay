@@ -1,34 +1,4 @@
-<?php 
-# Start Session:
 
-session_start();
-
-?>
-
-<?php
-
-	if($_POST){
-		$q = "SELECT * FROM users WHERE email = '$_POST[email]' AND password = '$_POST[password]'";
-		$r = mysqli_query($dbc, $q);
-		$num = mysqli_num_rows($r);
-		
-		if ($num == 1){
-			$_SESSION['username'] = $_POST['email'];
-			$data = mysqli_fetch_assoc($r);
-			$user_type =  $data['user_type'];
-			if($user_type==0){
-				header('location: admin/index.php');
-			}
-			else{
-				header('location: front/user_home.php');
-			}	
-		}
-		else{
-			echo "User name or password invalid";
-		}
-	} 
-
-?>
 
 <!DOCTYPE html>
 <html>  
@@ -36,14 +6,14 @@ session_start();
 		
 		
 		
-		<?php include('config/docs.php');?>
+		<?php include('../application/views/includes/docs.php');?>
 		
 	
 		
 
 	</head>
 	<body>
-		<?php include ('template/User/home_header.php'); ?>
+		<?php include ('../application/views/user/home_header.php'); ?>
 		
 	
 		<section class="hero">
@@ -65,20 +35,20 @@ session_start();
 						
   						<a class="btn btn-large btn-success" data-toggle="modal" data-target="#register"><strong>Register </strong><br> Now</a>
 					</div>
-						 <?php include('template/Interfaces/registration.php');?>
+						 <?php include('../application/views/registration/registration.php');?>
 				</div>
 			</div>
 			</div>
 			
 			<div class ="col-md-12">
-				<?php include ('template/User/slidesnavigator.php');?>
+				<?php include ('../application/views/user/video_navigator.php');?>
 			</div>
 		</section>
 		
 		
-		<?php include ('template/User/footer.php'); ?>
+		<?php include ('../application/views/includes/footer.php'); ?>
 		
-		<?php include('config/js.php');?>
+		<?php include('../application/views/includes/js.php');?>
 		
 	</body>
 	

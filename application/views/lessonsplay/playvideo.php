@@ -4,7 +4,7 @@
 		
 		
 		
-		<?php include('../../config/docs.php');?>
+		<?php include('../includes/docs.php');?>
 		
 		
  
@@ -49,7 +49,7 @@
 			</div>
 			</div>
 			
-			<?php include('../../config/js.php');?>
-			<?php include ('../User/footer.php');?>
+			<?php include('../includes/js.php');?>
+			<?php include ('../includes/footer.php');?>
 	</body>
 	</html>

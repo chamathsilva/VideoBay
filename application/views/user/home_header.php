@@ -1,3 +1,4 @@
+
 <div class="home_header">
 	<div class="container-fluid">
 	
@@ -11,12 +12,12 @@
 			<form class= "form-inline" action = "index.php" method="post" role ="form">
 				<br>
 				<div class="form-group">
-					<input type="email" class="form-control" id="email" placeholder="Enter email"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="email" class="form-control" id="User_Name" placeholder="Enter Username"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 				</div>
 				
 				<div class="form-group">
-					<input type="password" class="form-control" id="pwd" placeholder="Enter password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="password" class="form-control" id="Password" placeholder="Enter password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</div>
 				
 				<button type="submit" class="btn btn-primary"> <strong>Login</strong></button>

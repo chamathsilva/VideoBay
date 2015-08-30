@@ -25,9 +25,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#name">Update Name</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="name" class="panel-collapse collapse">
 								<div class="panel-body">
@@ -52,9 +52,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#email">Change Email</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="email" class="panel-collapse collapse">
 								<div class="panel-body">
@@ -76,9 +76,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#password">Change password</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="password" class="panel-collapse collapse">
 								<div class="panel-body">	
@@ -121,7 +121,7 @@
 			
 			
 			
-			<!-- <?php include ('../includes/footer.php');?> -->
+			 <?php include ('../includes/footer.php');?> 
 			<?php include('../includes/js.php');?>
 			
 	
