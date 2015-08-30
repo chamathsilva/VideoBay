@@ -1,5 +1,5 @@
 body {
-    background-color:  #7dcbf2;
+    background-color:  #525453;
     height: 100%;
 }
 
@@ -13,6 +13,7 @@ body {
 .inner-bg {
     padding: 120px 0 170px 0;
     background-color: #525453;
+    min-height:100%;
 }
 
 .top-content .text {
@@ -210,12 +211,71 @@ color: #FFF;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 500px;
+    height: 640px;
+}
+
+
+.thumb {
+    margin-bottom: 30px;
 }
 
 
 
 
+/* FOOTER */
 
+.footer {
+        position:relative;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 80px;
+        background-color:#7dcbf2;
+}
+
+
+
+footer h5 {
+    margin: 25px 0 -2px 0;
+    font-weight: 700;
+    font-family:'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+.orga{
+    font-size:12px;
+ 
+    margin:0;
+    color:#fff;
+}
+
+.orga a{
+    color:#fff;
+    font-weight: bold;
+}
+
+.orga a:hover{
+    color:#009840;
+}
+
+
+.container-fluid.body-content {
+  position: absolute;
+  top: 50px;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+
+
+/* FINDEX PAGE GALARY */
+
+.text2{
+    color: #fff;
+text-align: center;
+margin-bottom: 50px
+}
 
 

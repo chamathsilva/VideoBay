@@ -80,5 +80,13 @@ Academic Earth was launched on the premise that
         <script src="../../public/js/validation.js"></script>
 
 
+        <footer class="footer"> 
+    <div class="container text-center">
+        <h5>Copyright &copy; UCSC VideoBay 2015</h5>
+        <p class="orga">Developed by Group-21</p>
+    </div>
+</footer>
+
+
     </body>
 </html>
