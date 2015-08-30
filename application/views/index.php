@@ -40,7 +40,7 @@ if(Input::exists()){
 <form action="" method="post">
 	<div class="field">
     	<lable for="User_Name">Username</lable>
-        <input type="text" name="User_Name" id="User_Name" autocomplete="off"  >
+        <input type="text" name="User_Nssame" id="User_Name" autocomplete="off"  >
         
     </div>
     
