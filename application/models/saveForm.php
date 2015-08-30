@@ -1,8 +1,11 @@
 <?php 
 
+require_once '../configs/core/init.php';
+/*
 require '/../configs/core/init.php';
 include "/../controllers/Session.php";
-require "/../controllers/Input.php";
+require "/../controllers/Input.php"; */
+
 class SendData{
 	public $l_id;
 	public $description;
@@ -76,9 +79,9 @@ $l_id=$send->getData();
 
 Session::put('lesson_id',$l_id);
 
-require("/../controllers/savelessons/lessonFolders.php");
+require("/../controllers/savelessons/lessonFolders.php"); // Recheck
 $f=new Folder();
 $f->createFolder($l_id,'');
-require ("/../views/uploadlessons/upload_video.php");
+require ("/../views/uploadlessons/upload_video.php"); // Rechek
 ?>
 

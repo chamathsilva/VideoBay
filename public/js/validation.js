@@ -45,29 +45,35 @@ $(function(){
 
 	$("#register-form").validate({
 		rules:{
-			email:{
+			E_mail:{
 				required: true,
 				email: true
 			},
-			password: {
+			Password: {
 				required: true,
 				strongPassword: true
 
 			} ,
-			password2: {
+			password_again: {
 				required: true,
-				equalTo: "#password"
+				equalTo: "#Password"
 			},
-			firstName:{
+			First_Name:{
 				required: true,
 				nowhitespace: true,
 				lettersonly: true
 			},
 
-			lastName:{
+			Last_Name:{
 				required: true,
 				nowhitespace: true,
 				lettersonly: true
+			},
+
+			User_Name:{
+				required: true,
+				nowhitespace: true,
+				
 			},
 			terms:{
 				required:true
@@ -82,6 +88,9 @@ $(function(){
 		password2: {
 				equalTo: "Please enter the same password again."
 			},
+		terms:{
+				required:"you must agree terms and condition"
+			}
 
 
 		}
@@ -90,11 +99,11 @@ $(function(){
 
 	$("#login-form").validate({
 		rules:{
-			username:{
+			User_Name:{
 				required: true,
 				
 			},
-			password: {
+			Password: {
 				required: true,
 			}
 		},

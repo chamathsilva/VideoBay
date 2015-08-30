@@ -23,11 +23,9 @@ if(Input::exists()){
 					echo '<p> Sorry logging in failed.</p>';
 					}
 		}else{
-			foreach($validation->errors() as $error){
-				echo $error,'<br>';
-				
-				}
-				
+			echo "ERROR";
+			Die();
+							
 				}
 		}
 	//}
@@ -48,14 +46,15 @@ if($user->isLoggedIn()){
 
 	if($user->hasPermission('admin')){
 		redirect::to('user/adminhome.php?name='.$name);
-		}else{
-			redirect::to('user/userhome.php?name='.$name);
+		}
+	else{
+		redirect::to('user/userhome.php?name='.$name);
 
-			}
+		}
 
 	}
 	
-		?>
+?>
 		
 		
 
@@ -112,3 +111,6 @@ if($user->isLoggedIn()){
                                     </div>
                                 </form>
                             </div>
+
+
+                            

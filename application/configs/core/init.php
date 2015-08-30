@@ -3,9 +3,9 @@ session_start();
 
 $GLOBALS['config'] = array(
 'mysql' =>array(
-	'host'=> '127.0.0.1',
+	'host'=> 'localhost',// 
 	'User_Name'=>'root',
-	'Password' => '',
+	'Password' => 'root', //
 	'db'=> 'database_user'
 	),
 'remember' => array(
@@ -66,8 +66,15 @@ spl_autoload_register(function($classname3){
 //spl_autoload_register("autoloadController");
 	
 	
+//fix path error by chamath
+if(file_exists('../controllers/functions/sanitize.php')){
+	require_once '../controllers/functions/sanitize.php';
+}else{
+	require_once '../../controllers/functions/sanitize.php';
+}
 
-require_once '/../../controllers/functions/sanitize.php';
+
+
 
 if(cookie::exists(config::get('remember/cookie_name')) && !Session::exists(config::get('session/session_name'))){
 	
