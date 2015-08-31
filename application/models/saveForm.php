@@ -79,9 +79,9 @@ $l_id=$send->getData();
 
 Session::put('lesson_id',$l_id);
 
-require("/../controllers/savelessons/lessonFolders.php"); // Recheck
+require("../controllers/savelessons/lessonFolders.php"); // Recheck
 $f=new Folder();
-$f->createFolder($l_id,'');
-require ("/../views/uploadlessons/upload_video.php"); // Rechek
+$f->createFolder('../../data/uploaded_lessons/',$l_id,'');
+require ("../views/uploadlessons/upload_video.php"); // Rechek
 ?>
 

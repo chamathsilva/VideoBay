@@ -1,6 +1,6 @@
 <?php 
-include "/../controllers/savelessons/saveConfig.php";
-require '/../configs/core/init.php';
+include "../controllers/savelessons/saveConfig.php";
+require '../configs/core/init.php';
 
 //require "connectToDB.inc.php";
 $ch=new ConfigHandler();

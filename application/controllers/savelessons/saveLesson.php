@@ -15,7 +15,7 @@ class FileHandler{
             if ( !empty( $_FILES )) {
             	
                 //$userFolder="C:/xampp/htdocs/series/ucsc_video_bay/uploaded_lessons/";
-              $userFolder="C:/xampp/htdocs/series/VideoBay/data/uploaded_lessons/";
+              $userFolder='../../../data/uploaded_lessons/';
 				
 				foreach($_FILES['files']['name'] as $f=>$name){
 					   

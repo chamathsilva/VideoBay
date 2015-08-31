@@ -12,7 +12,7 @@ $sh=new SlidesHandler();
 session_start();
 $id=Session::get('lesson_id');
 $fol=new Folder();
-$fol->createFolder($id,'slides');
+$fol->createFolder('../../../data/uploaded_lessons/',$id,'slides');
 $sh->do_upload($id,"slides");
 include "../../views/uploadlessons/upload_config.php";
 
