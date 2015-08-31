@@ -48,7 +48,7 @@ class DB{
 			return $this;
 			
 		}
-		public function action($action,$table,$where =array()){
+    public function action($action,$table,$where =array()){
 			if(count($where) === 3){
 				$operators = array('=','>','<','>=','<=');
 				$field    =$where[0];
@@ -67,9 +67,33 @@ class DB{
 			}
 			
 			
-		public function get($table,$where){
+    public function get($table,$where){
 			return $this->action('SELECT *',$table,$where);
 			}
+
+    // new function for select all form data-base
+
+
+    public function getAll($table){
+        $stmt = $this->_pdo->query('SELECT * FROM '.$table);
+        return $stmt;
+    }
+
+
+    /**
+     * @param $table
+     * @return all rows sorted by $sortkey
+     */
+    public function getAllBySortOrder($table,$sortKey){
+        $stmt = $this->_pdo->query('SELECT * FROM '.$table.' ORDER BY '.$sortKey);
+        return $stmt;
+
+    }
+
+    //end of new function
+
+
+
 		
 		public function delete($table,$where){
 			return $this->action('DELETE',$table,$where);
@@ -134,7 +158,7 @@ class DB{
 			if(!$this->query($sql,$fields)->error()){
 				
 				return true;
-				}
+			}
 				return false;
 			}		
 				

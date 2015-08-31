@@ -1,4 +1,4 @@
-<?php
+<?/*php
 require_once 'core/init.php';
 if(Input::exists()){
 	if(Token::check(Input::get('token'))){
@@ -58,5 +58,7 @@ if(Input::exists()){
     <input type="submit" value="Log in" >
     
 </form>
+
+*/ ?>
     
     
