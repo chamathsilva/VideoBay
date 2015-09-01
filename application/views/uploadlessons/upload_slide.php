@@ -31,12 +31,37 @@
                             <i class="fa fa-dashboard"></i> Upload Slides
                         </li>
                     </ol>
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3> Slides </h3>
+                            <p>add Slides here</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-sign-in"></i>
+                        </div>
+                    </div>
+                    <div id = "uploadlesson" class="form-bottom">
+                        <form action="saveSlides.php" method="POST" enctype="multipart/form-data">
+                            <label class="control-label col-sm-2" for="fileselect">upload Slides : </label>
+                            <div class="col-sm-10">
+
+                            <input type="file" name="files[]" id="file" multiple="multiple" ></div>
+                            <button type="submit" value="upload" name="upload" class="btn btn-default">Upload</button>
+                            <!--<input type="submit" value="upload" name="upload"><br><br>-->
+
+                        </form>
 
 
-                    <form action="introduction.php" method="POST">
-                        upload lesson <input type="submit" value="upload" name="upload">
-                    </form>
 
+                    </div>
+
+
+
+                    <!--<form action="saveSlides.php" method="POST" enctype="multipart/form-data">
+                        <label for="fileselect">upload slides  </label>
+                        <input type="file" name="files[]" id="file" multiple="multiple">
+                        <input type="submit" value="upload" name="upload"><br><br>
+                    </form>-->
                 </div>
             </div>
 

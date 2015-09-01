@@ -32,12 +32,39 @@
                             <i class="fa fa-dashboard"></i> Upload Video
                         </li>
                     </ol>
-                    <form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
+
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3> Upload Video </h3>
+                            <p>add Video here </p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-sign-in"></i>
+                        </div>
+                    </div>
+                    <div id = "uploadVideo" class="form-bottom">
+                        <form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
+                            <label class="control-label col-sm-2" for="fileselect">Upload Video File : </label>
+                            <div class="col-sm-10">
+
+                                <input type="file" name="files[]" id="file" multiple="multiple" ></div>
+                                <button type="submit" value="upload" name="upload" class="btn btn-default">Upload</button>
+                            <!--<input type="submit" value="upload" name="upload"><br><br>-->
+
+                        </form>
+
+
+
+                    </div>
+
+
+
+                    <!--<form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
                         <label for="fileselect">upload video files </label>
                         <input type="file" name="files[]" id="file" multiple="multiple">
                         <input type="submit" value="upload" name="upload"><br><br>
 
-                    </form>
+                    </form>-->
 
                 </div>
             </div>
