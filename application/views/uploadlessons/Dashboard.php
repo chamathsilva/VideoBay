@@ -1,5 +1,10 @@
-
-
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Smalkakulage
+ * Date: 9/1/15
+ * Time: 11:56 PM
+ */ ?>
 
 
 <html>
@@ -24,21 +29,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="admin page-header" style="margin:50px 0px 20px">
-                        Dashboard <small>Add Lessons</small>
+                    <h1 class="page-header" style="margin:50px 0px 20px">
+                        Dashboard <small>Statistics Overview</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li class="active">
-                            <i class="fa fa-dashboard"></i> Upload Video
+                            <i class="fa fa-dashboard"></i> Dashboard
                         </li>
                     </ol>
-                    <form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
-                        <label for="fileselect">upload video files </label>
-                        <input type="file" name="files[]" id="file" multiple="multiple">
-                        <input type="submit" value="upload" name="upload"><br><br>
-
-                    </form>
-
                 </div>
             </div>
 
@@ -60,6 +58,4 @@
 
 
 
-
-
-
+>
