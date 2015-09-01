@@ -5,11 +5,18 @@ $(document).ready(function(){
       return false;
         
     });
+
+
+
     $("#show").click(function(){
         $("p").show();
     });
 
 	$(".show-video").colorbox({iframe:true, innerWidth:650, innerHeight:390});
+
+
+
+
 
 });
 

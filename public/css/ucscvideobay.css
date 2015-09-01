@@ -23,6 +23,11 @@ body {
 
 }
 
+.img .img-responsive{
+    width: 600px;
+    height: 500px;
+}
+
 .top-content .text h1 { color: #fff; }
 .top-content .text p { text-align: justify;}
 
@@ -64,9 +69,10 @@ body {
     text-align: left;
 }
 
+/*
 <div class=​"form-group">​…​</div>​.form-bottom form .input-error {
     border-color: #19b9e7;
-}
+}*/
 
 /***** button style *****/
 button.btn {
@@ -278,4 +284,37 @@ text-align: center;
 margin-bottom: 50px
 }
 
+/*Slid navigator */
 
+.slidNavigator{
+    margin-top: 2%;
+
+}
+
+/* carousel */
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+
+.carousel-control {
+    left: -12px;
+}
+.carousel-control.right {
+    right: -12px;
+}
+
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+
+.carousel-indicators li {
+    background: #c0c0c0;
+}
+
+.carousel-indicators .active {
+    background: #333333;
+}

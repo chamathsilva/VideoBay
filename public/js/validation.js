@@ -89,7 +89,7 @@ $(function(){
 				equalTo: "Please enter the same password again."
 			},
 		terms:{
-				required:"you must agree terms and condition"
+				required:"You must agree to the terms and conditions"
 			}
 
 
