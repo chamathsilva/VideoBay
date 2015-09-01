@@ -1,3 +1,30 @@
+<?php
+require_once '../../configs/core/init.php';
+
+if (isset($_GET['id'])){
+    $id = $_GET['id'];
+    $db = DB::getInstance();
+
+
+    $data = $db->getLessonbyid($id);
+    if ($row = $data->fetch(PDO::FETCH_ASSOC)){
+        $name = $row['name'];
+        $lecture = $row['lecture'];
+        $no_of_slid = $row['no_of_slides'];
+        $temp = '../../../data/uploaded_lessons/'.$id.'/videos/1.mp4';
+        $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/';
+        echo "hello";
+        echo $id;
+        if ($slid_data = $db->getAllBySortOrder($id)){
+        }
+    };
+}
+else{
+    echo 'lesson id is not set';
+    Die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,63 +42,100 @@
     <link rel="stylesheet" href="../../../public/css/form-elements.css">
     <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
 
-    <!-- Color Box -->
-    <link rel="stylesheet" href="../../../public/css/colorbox.css" />
 
 </head>
 
     <body>
-
+        <div class="wrapper" >
         <?php include '../includes/navbar.php' ?>
-        <!-- Top content -->
-        <div class="top-content">
             <div class="inner-bg">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                           <p>test video</p>
                             <div class="embed-responsive embed-responsive-16by9">
                                 <video id="myVideo" class="embed-responsive-item"  width = "300px" height ="400px" autoplay controls>
-                                   <!-- <source src="<?php echo "$temp"?>"> -->
-                                    <source src="Aruba_ 19 Miles of Happiness - 4K.mp4">
-
+                                    <source src="<?php echo "$temp"?>">
+                                    <!--<source src="../../../data/uploaded_lessons/44/videos/1.mp4">-->
                                 </video>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <p> test slid</p>
-
                                 <!--
                                 <img id="xx" class="img-responsive" src="<?php echo$src_path.'1.jpg';?>" alt="Wrong link" width="800px" height="400px" >
                                 -->
-                                <img id="xx" class="img-responsive" src="<?php echo '1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
-
+                                <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
                             </div>
                         </div>
                     <div class="row slidNavigator">
-
                         <div class="col-sm-12">
-                            hello world
-
+                            <div  id="flip">
+                                <div id = "drop-dow">
+                                <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="container">
-
-
-
-                    </div>
-
-
+                        <div id="panel" class="col-sm-12">
+                            <div class="detail-panal">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="lesson-topic">
+                                            <?php echo $name; ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button type="submit" class="btn like"><i class="fa fa-thumbs-up"></i> Like | 34 </button>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button type="submit" class="btn like"><i class="fa fa-thumbs-down"></i></i> 2 </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="lesson-topic">
+                                            <i class="fa fa-graduation-cap"></i>
+                                            <?php echo $lecture; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="row slidNavigator">
+                        <div id = "navigator" class="col-sm-12">
+                            <div class="detail-panal">
+                                <nav id="menu" >
+                                <ul>
+                                <?php
+                                $index = 1;
+                                while ($index <= $no_of_slid){
+                                    $row = $slid_data->fetch(PDO::FETCH_ASSOC);
+                                    $start_time = $row['start_time'];
+                                    $end_time = $row['end_time']; ?>
+
+
+                                    <li style="float: left;padding-right: 10px"> <article data-start="<?php echo $start_time; ?>" data-end="<?php echo $end_time; ?>"> <a href="<?php echo $index ?>"><img  src=" <?php echo $src_path.$index.'.jpg' ?>  " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a></article></li>
+                                    <?php
+                                    $index += 1;
+                                }
+                                ?>
+                                </ul>
+                                    </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!--container end-->
             </div>
-        </div>
 
 
 
+        <footer class="footer">
+            <div class="container text-center">
+                <h5>Copyright &copy; UCSC VideoBay 2015</h5>
+                <p class="orga">Developed by Group-21</p>
+            </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../../public/js/ucscvideobay.js"></script>
         <script src="../../../public/js/jquery.colorbox.js"></script>
+            <?php include '../../controllers/synchronize.php';?>
+        </div>
     </body>
 </html>

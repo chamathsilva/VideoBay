@@ -24,7 +24,7 @@
 
     </head>
     <body>
-
+    <div class="wrapper" >
         <?php include 'includes/navbar.php' ?>
         <!-- Top content -->
         <div class="top-content">
@@ -164,6 +164,7 @@ Academic Earth was launched on the premise that
         <p class="orga">Developed by Group-21</p>
     </div>
 </footer>
+        </div>
 
 
     </body>

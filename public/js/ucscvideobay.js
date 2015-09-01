@@ -6,6 +6,11 @@ $(document).ready(function(){
         
     });
 
+    $("#flip").click(function(){
+        $("#panel").slideToggle("fast");
+        $("#navigator").slideToggle("fast");
+    });
+
 
 
     $("#show").click(function(){

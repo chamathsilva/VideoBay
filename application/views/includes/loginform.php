@@ -73,7 +73,7 @@ if($user->isLoggedIn()){
                                 </div>
                             </div>
                             <div id = "sign-up-form"class="form-bottom">
-                                <form id = "login-form" role="form" action="" method="post" class="login-form">
+                                <form id = "login-form" role="form" action="#" method="post" class="login-form">
 
                                     <div class="form-group">
                                         <label class="sr-only" for="form-first-name">User name</label>
