@@ -1,7 +1,6 @@
 
 
-	<div class="container-fluid" style="filter:alpha(opacity=50)">
-    <div class="col-md-12">
+	
          
 
         <div class="container-fluid" style= "padding:0px">

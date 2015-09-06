@@ -12,7 +12,7 @@
 			<form class= "form-inline" action = "index.php" method="post" role ="form">
 				<br>
 				<div class="form-group">
-					<input type="email" class="form-control" id="User_Name" placeholder="Enter Username"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" class="form-control" id="User_Name" placeholder="Enter Username"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 				</div>
 				
