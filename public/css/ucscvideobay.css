@@ -23,6 +23,10 @@ html{
     min-height:100%;
 }
 
+#lesson_play{
+    padding: 70px 0 20px 0;
+}
+
 .top-content .text {
     padding-top: 120px;
     text-align: center;

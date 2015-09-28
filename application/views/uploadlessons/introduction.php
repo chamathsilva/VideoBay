@@ -13,7 +13,7 @@ Programming</option></select><br><br>
 
 <input type="submit" name="next" value="next">
 	
-</script>
+</form>
 </body>
 </html>
 

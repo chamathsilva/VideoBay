@@ -63,15 +63,16 @@ if($user->isLoggedIn()){
 	
 
 
-          <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Please sign in</h3>
-                                    <p>Fill in the form below to get instant access:</p>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-sign-in"></i>
-                                </div>
-                            </div>
+<div class="form-top">
+    <div class="form-top-left">
+        <h3>Please sign in</h3>
+        <p>Fill in the form below to get instant access:</p>
+    </div>
+    <div class="form-top-right">
+        <i class="fa fa-sign-in"></i>
+    </div>
+</div>
+
                             <div id = "sign-up-form"class="form-bottom">
                                 <form id = "login-form" role="form" action="#" method="post" class="login-form">
 

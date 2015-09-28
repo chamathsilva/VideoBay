@@ -16,6 +16,9 @@ if (isset($_GET['id'])){
         echo "hello";
         echo $id;
         if ($slid_data = $db->getAllBySortOrder($id)){
+        }else{
+            echo 'slid data not found';
+            Die();
         }
     };
 }
@@ -43,15 +46,18 @@ else{
     <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
 
 
+
+
+
 </head>
 
     <body>
         <div class="wrapper" >
         <?php include '../includes/navbar.php' ?>
-            <div class="inner-bg">
+            <div class="inner-bg" id="lesson_play">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <video id="myVideo" class="embed-responsive-item"  width = "300px" height ="400px" autoplay controls>
                                     <source src="<?php echo "$temp"?>">
@@ -59,22 +65,24 @@ else{
                                 </video>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                                 <!--
                                 <img id="xx" class="img-responsive" src="<?php echo$src_path.'1.jpg';?>" alt="Wrong link" width="800px" height="400px" >
                                 -->
                                 <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
-                            </div>
                         </div>
+
+                        <div id = "left" class="col-sm-2">
+                            hello
+                        </div>
+
+
+                    </div>
                     <div class="row slidNavigator">
-                        <div class="col-sm-12">
-                            <div  id="flip">
-                                <div id = "drop-dow">
-                                <i class="fa fa-chevron-down"></i>
-                                </div>
-                            </div>
+                        <div class="col-sm-10">
+
                         </div>
-                        <div id="panel" class="col-sm-12">
+                        <div class="col-sm-10">
                             <div class="detail-panal">
                                 <div class="row">
                                     <div class="col-sm-4">
@@ -99,9 +107,11 @@ else{
                         </div>
                     </div>
                     <div class="row slidNavigator">
-                        <div id = "navigator" class="col-sm-12">
-                            <div class="detail-panal">
-                                <nav id="menu" >
+                        <!--p id="p1">Hello World!</p-->
+                        <div class="col-sm-10">
+                            <div class="detail-panal" style="border:1px solid black;width:100%;height:200px;overflow-y:hidden;overflow-x:scroll;">
+
+                                <nav id="menu" style="width:100000%;">
                                 <ul>
                                 <?php
                                 $index = 1;
@@ -118,6 +128,7 @@ else{
                                 ?>
                                 </ul>
                                     </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,14 +138,15 @@ else{
 
 
         <footer class="footer">
+
             <div class="container text-center">
                 <h5>Copyright &copy; UCSC VideoBay 2015</h5>
                 <p class="orga">Developed by Group-21</p>
             </div>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../../../public/js/ucscvideobay.js"></script>
-        <script src="../../../public/js/jquery.colorbox.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="../../../public/js/ucscvideobay.js"></script>
+            <script src="../../../public/js/jquery.colorbox.js"></script>
             <?php include '../../controllers/synchronize.php';?>
         </div>
     </body>
