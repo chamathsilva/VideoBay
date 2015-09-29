@@ -3,14 +3,18 @@
 /* if the document is ready... */
 $(document).ready(function(){
 
+
+
 /* if HTML5 video is supported */
-if($('video').attr('canPlayType')){
+
+ //document.getElementById("p1").innerHTML = "test1";
   var timestamps = [],
     last = 0,
     all = 0,
     now = 0,
     old = 0,
-    i=0; 
+    i=0;
+
 /* hide all articles via CSS */
 $('html').addClass('js');
 
@@ -22,8 +26,8 @@ $('article').each(function(o){
   if($(this).attr('data-start')){
     timestamps.push({
       start : +$(this).attr('data-start'),
-      end : +$(this).attr('data-end'),
-      });
+      end : +$(this).attr('data-end')
+    });
   }
 });
 
@@ -37,6 +41,7 @@ $('video').bind('timeupdate',function(event){
   now = parseInt(this.currentTime);
   /* throttle function calls to full seconds */
   showsection(now);
+
   old = now;
 });
 
@@ -53,15 +58,17 @@ function showsection(t){
           /*set blank slid*/
         }
       }
-    };
-  };
-});
+    }
+}
+)
+
 
 $(document).ready(function(){
 
 $('#menu ul li a').click(function(){
   document.getElementById("xx").src = "<?php echo $src_path; ?>"+$(this).attr('href')+"."+"jpg";
   return false;
+
 });
 
 });

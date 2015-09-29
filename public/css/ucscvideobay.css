@@ -2,18 +2,29 @@ body {
     background-color:  #525453;
     height: 100%;
 }
+html{
+    height: 100%;
+}
 
 /***** Top content *****/
 .form-box2{
     margin-top: 100px
 }
 
+.wrapper {
+    min-height:100%;
+    position:relative;
+}
 
 /***** Top content *****/
 .inner-bg {
-    padding: 120px 0 170px 0;
+    padding: 120px 0 20px 0;
     background-color: #525453;
     min-height:100%;
+}
+
+#lesson_play{
+    padding: 70px 0 20px 0;
 }
 
 .top-content .text {
@@ -95,6 +106,14 @@ button.btn {
 button.btn.full{ 
     width: 100%;
 }
+
+button.btn.like{
+    width: auto;
+    padding: 0px 12px 0px 12px;
+}
+
+
+
 
 
 .show-video{
@@ -194,7 +213,7 @@ color: #FFF;
     display: flex;
     overflow: hidden;
     height: 100vh;
-    margin-top: -100px;
+    margin-top: 0px;
     padding-top: 100px;
     position: relative;
     width: 100%;
@@ -230,7 +249,7 @@ color: #FFF;
 /* FOOTER */
 
 .footer {
-        position:relative;
+        position:absolute;
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
@@ -286,7 +305,7 @@ margin-bottom: 50px
 /*Slid navigator */
 
 .slidNavigator{
-    margin-top: 2%;
+    margin-top: 0.5%;
 
 }
 
@@ -320,13 +339,52 @@ margin-bottom: 50px
 
 
 
+
+
+/* lessons play topic and like bar */
+
+.detail-panal {
+    padding: 12px 25px 10px 25px;
+    background: #fff;
+    -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+    text-align: left;
+}
+
+.lesson-topic{
+    font-size: 20px;
+    padding-top: 12px;
+
+}
+
+#panel{
+    display: none;
+}
+
+#flip{
+    padding: 12px 25px 10px 25px;
+    background-color:#7dcbf2;
+    -moz-border-radius: 0 0 0 0; -webkit-border-radius: 0 0 0 0; border-radius: 0 0 0 0;
+
+}
+
+
+
+#drop-dow{
+    text-align: center;
+    color: #fff;
+
+}
+
+
+
+
 /*        ------------ admin stuff----------------------             */
 
 
 #adminbody {
-    margin-top: 300px;
-    background-color: #ffffff;
-}
+            margin-top: 300px;
+            background-color: #ffffff;
+        }
 
 @media(min-width:768px) {
     #adminbody {
@@ -535,5 +593,3 @@ ul.alert-dropdown {
 .toppad
 {margin-top:20px;
 }
-
-

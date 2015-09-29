@@ -34,6 +34,7 @@ $(document).ready(function(){
     </head>
     <body>
 
+    <div class="wrapper" >
         <?php include 'includes/navbar.php' ?>
         <!-- Top content -->
         <div class="top-content">
@@ -67,7 +68,7 @@ Academic Earth was launched on the premise that
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
 
@@ -80,12 +81,13 @@ Academic Earth was launched on the premise that
         <script src="../../public/js/validation.js"></script>
 
 
-        <footer class="footer"> 
-    <div class="container text-center">
-        <h5>Copyright &copy; UCSC VideoBay 2015</h5>
-        <p class="orga">Developed by Group-21</p>
+    <footer class="footer">
+        <div class="container text-center">
+            <h5>Copyright &copy; UCSC VideoBay 2015</h5>
+            <p class="orga">Developed by Group-21</p>
+        </div>
+    </footer>
     </div>
-</footer>
 
 
     </body>

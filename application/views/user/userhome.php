@@ -61,9 +61,10 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)) {
 
 
 
-    echo "</br><a href ='user_lesson_play.php?id=$id'> $name </a> ";
+    echo "</br><a href ='../lessonsplay/lessonPalyPanal.php?id=$id'> $name </a> ";
 }
 
+/*
 echo '<br>'.'sorting testing';
 
 $data = $db->getAllBySortOrder('lesson','name');
@@ -77,7 +78,7 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)) {
     echo "</br><a href ='user_lesson_play.php?id=$id'> $name </a> ";
 }
 
-
+*/
 
 
 

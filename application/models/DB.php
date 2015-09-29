@@ -81,14 +81,24 @@ class DB{
 
 
     /**
-     * @param $table
-     * @return all rows sorted by $sortkey
+     * @param $lessonId
+     * @return all slide start and end time
      */
-    public function getAllBySortOrder($table,$sortKey){
-        $stmt = $this->_pdo->query('SELECT * FROM '.$table.' ORDER BY '.$sortKey);
+    public function getAllBySortOrder($lessonId){
+        $stmt = $this->_pdo->query('SELECT * FROM configdata WHERE lesson_id = '.$lessonId.' ORDER BY slide_id');
         return $stmt;
 
     }
+
+	/**
+	 * @param $lessonId
+	 * @return all data relevet to lesson id
+	 */
+	public function getLessonbyid($lessonId){
+		$stmt = $this->_pdo->query('SELECT * FROM lesson WHERE lesson_id ='.$lessonId);
+		return $stmt;
+	}
+
 
     //end of new function
 
