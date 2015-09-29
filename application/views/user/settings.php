@@ -1,17 +1,31 @@
 <!DOCTYPE html> 
 <html>  
 	<head>
-		
-		<?php include('../../config/docs.php');?>
+
+        <?php
+        require_once '../../configs/core/init.php';
+
+
+        ?>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../public/css/form-elements.css">
+        <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
+
+        <!-- Color Box -->
+        <link rel="stylesheet" href="../../../public/css/colorbox.css" />
 	
 	</head>
 	
 	<body>
-			<?php include ('../User/user_header.php');?>
-			
+    <?php
+    include '../../views/includes/navbar_user.php'
+    ?>
 		<div class="row">
 			<div class= "container-fluid col-md-offset-8">
-				<?php include ('../User/Advertisements.php'); ?>
 		
 			</div>
 			<div class= "container-fluid">
@@ -43,8 +57,8 @@
 											<input type="text" class="form-control" id="Lname" placeholder="Enter Last Name">
 											<br>
 										</div>
-										<button type="button" class="btn btn-primary col-sm-2 col-sm-offset-6 col-xs-11 " style="box-shadow: 2px 2px 10px grey">Confirm</button>
-										<button type="button" class="btn btn-primary col-sm-2 col-sm-offset-1 col-xs-11 " style="box-shadow: 2px 2px 10px grey" >Cancel</button>
+										<button type="button" class="btn  col-sm-2 col-sm-offset-6 col-xs-11 " style="box-shadow: 2px 2px 10px grey">Confirm</button>
+										<button type="button" class="btn  col-sm-2 col-sm-offset-1 col-xs-11 " style="box-shadow: 2px 2px 10px grey" >Cancel</button>
 									
 								</div>
 							  </div>
@@ -113,17 +127,18 @@
 									
 			</div>
 			
-		</div>	
-									
-												
-									
-			
-			
-			
-			
-			<?php include ('../User/footer.php');?>
-			<?php include('../../config/js.php');?>
-			
+		</div>
+
+
+
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--<script src="../../../library/Jquery/jquery.js"></script>-->
+    <script src="../../../public/js/ucscvideobay.js"></script>
 	
 	</body>
 	</html>
