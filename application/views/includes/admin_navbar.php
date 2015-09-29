@@ -8,7 +8,7 @@
 
 
 <!-- Navigation -->
-<nav class="admin navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav id="adminnavbar" class="admin navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="admin navbar-header">
         <button type="button" class="admin navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -90,17 +90,17 @@
             <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> AdminName <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    <a href="settings.php"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                    <a href="adminsettings.php"><i class="fa fa-fw fa-gear"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="../user/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
             </ul>
         </li>
@@ -112,7 +112,7 @@
                 <a href="Dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="introduction.php"><i class="fa fa-fw fa-bar-chart-o"></i> add Lessons</a>
+                <a href="../uploadlessons/introduction.php"><i class="fa fa-fw fa-bar-chart-o"></i> add Lessons</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-table"></i> Remove Lessons</a>

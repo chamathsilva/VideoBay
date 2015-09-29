@@ -3,7 +3,7 @@ include "lessonFolders.php";
 include "../Session.php";
 
 class SlidesHandler extends FileHandler{
-	public $valid_files=array("jpg");
+	public $valid_files=array("jpg","JPG");
  	public $max_size=10240000;
 	public $column="slides_path";
 }
