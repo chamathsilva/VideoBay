@@ -72,8 +72,14 @@ else{
                                 <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
                         </div>
 
-                        <div id = "left" class="col-sm-2">
-                            hello
+                        <div id = "left" class="col-sm-2 area">
+                            watch next
+                        </div>
+                        <div id = "left" class="col-sm-2 area">
+                            Most viewed
+                        </div>
+                        <div id = "left" class="col-sm-2 area">
+                            favorite
                         </div>
 
 
