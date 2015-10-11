@@ -82,6 +82,47 @@ Session::put('lesson_id',$l_id);
 require("../controllers/savelessons/lessonFolders.php"); // Recheck
 $f=new Folder();
 $f->createFolder('../../data/uploaded_lessons/',$l_id,'');
-require ("../views/uploadlessons/upload_video.php"); // Rechek
+#require ("../views/uploadlessons/upload_video.php"); // Rechek
 ?>
 
+<html>
+<head>
+	<title>UCSC VideoBay</title>
+
+<head>
+
+	<link rel="stylesheet" href="../../library/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../../library/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../library/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../public/css/ucscvideobay.css">
+</head>
+
+	<body>
+
+	<body id="adminbody">
+	<div id="adminwrapper">
+
+		<?php include '../views/includes/admin_navbar.php' ?>
+
+		<div class="wrapper" >
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 text ">
+
+		<?php
+		require ("../views/uploadlessons/upload_video.php");
+		?>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</body>
+</html>

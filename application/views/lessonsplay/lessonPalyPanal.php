@@ -51,74 +51,74 @@ else{
 
 </head>
 
-    <body>
-        <div class="wrapper" >
-        <?php include '../includes/navbar.php' ?>
-            <div class="inner-bg" id="lesson_play">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <video id="myVideo" class="embed-responsive-item"  width = "300px" height ="400px" autoplay controls>
-                                    <source src="<?php echo "$temp"?>">
-                                    <!--<source src="../../../data/uploaded_lessons/44/videos/1.mp4">-->
-                                </video>
-                            </div>
-                        </div>
-                        <div class="col-sm-5">
-                                <!--
+<body>
+<div class="wrapper" >
+    <?php include '../includes/navbar.php' ?>
+    <div class="inner-bg" id="lesson_play">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video id="myVideo" class="embed-responsive-item"  width = "300px" height ="400px" autoplay controls>
+                            <source src="<?php echo "$temp"?>">
+                            <!--<source src="../../../data/uploaded_lessons/44/videos/1.mp4">-->
+                        </video>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <!--
                                 <img id="xx" class="img-responsive" src="<?php echo$src_path.'1.jpg';?>" alt="Wrong link" width="800px" height="400px" >
                                 -->
-                                <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
-                        </div>
+                    <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
+                </div>
 
-                        <div id = "left" class="col-sm-2 area">
-                            watch next
-                        </div>
-                        <div id = "left" class="col-sm-2 area">
-                            Most viewed
-                        </div>
-                        <div id = "left" class="col-sm-2 area">
-                            favorite
-                        </div>
+                <div id = "left" class="col-sm-2 area">
+                    watch next
+                </div>
+                <div id = "left" class="col-sm-2 area">
+                    Most viewed
+                </div>
+                <div id = "left" class="col-sm-2 area">
+                    favorite
+                </div>
 
 
-                    </div>
-                    <div class="row slidNavigator">
-                        <div class="col-sm-10">
+            </div>
+            <div class="row slidNavigator">
+                <div class="col-sm-10">
 
-                        </div>
-                        <div class="col-sm-10">
-                            <div class="detail-panal">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="lesson-topic">
-                                            <?php echo $name; ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-1">
-                                        <button type="submit" class="btn like"><i class="fa fa-thumbs-up"></i> Like | 34 </button>
-                                    </div>
-                                    <div class="col-sm-1">
-                                        <button type="submit" class="btn like"><i class="fa fa-thumbs-down"></i></i> 2 </button>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="lesson-topic">
-                                            <i class="fa fa-graduation-cap"></i>
-                                            <?php echo $lecture; ?>
-                                        </div>
-                                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="detail-panal">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="lesson-topic">
+                                    <?php echo $name; ?>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                                <button type="submit" class="btn like"><i class="fa fa-thumbs-up"></i> Like | 34 </button>
+                            </div>
+                            <div class="col-sm-1">
+                                <button type="submit" class="btn like"><i class="fa fa-thumbs-down"></i></i> 2 </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="lesson-topic">
+                                    <i class="fa fa-graduation-cap"></i>
+                                    <?php echo $lecture; ?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row slidNavigator">
-                        <!--p id="p1">Hello World!</p-->
-                        <div class="col-sm-10">
-                            <div class="detail-panal" style="border:1px solid black;width:100%;height:200px;overflow-y:hidden;overflow-x:scroll;">
+                </div>
+            </div>
+            <div class="row slidNavigator">
+                <!--p id="p1">Hello World!</p-->
+                <div class="col-sm-10">
+                    <div class="detail-panal" style="border:1px solid black;width:100%;height:200px;overflow-y:hidden;overflow-x:scroll;">
 
-                                <nav id="menu" style="width:100000%;">
-                                <ul>
+                        <nav id="menu" style="width:100000%;">
+                            <ul>
                                 <?php
                                 $index = 1;
                                 while ($index <= $no_of_slid){
@@ -132,28 +132,28 @@ else{
                                     $index += 1;
                                 }
                                 ?>
-                                </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+                            </ul>
+                        </nav>
                     </div>
-                </div>  <!--container end-->
+                </div>
             </div>
-
-
-
-        <footer class="footer">
-
-            <div class="container text-center">
-                <h5>Copyright &copy; UCSC VideoBay 2015</h5>
-                <p class="orga">Developed by Group-21</p>
-            </div>
-        </footer>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script src="../../../public/js/ucscvideobay.js"></script>
-            <script src="../../../public/js/jquery.colorbox.js"></script>
-            <?php include '../../controllers/synchronize.php';?>
         </div>
-    </body>
+    </div>  <!--container end-->
+</div>
+
+
+
+<footer class="footer">
+
+    <div class="container text-center">
+        <h5>Copyright &copy; UCSC VideoBay 2015</h5>
+        <p class="orga">Developed by Group-21</p>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--script src="../../../public/js/ucscvideobay.js"></script-->
+<script src="../../../public/js/jquery.colorbox.js"></script>
+<?php include '../../controllers/synchronize.php';?>
+</div>
+</body>
 </html>

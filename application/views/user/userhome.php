@@ -46,10 +46,24 @@ include '../../views/includes/navbar_user.php'
 -->
 
 <!-- new function -->
-<h1> USER HOME PAGE</h1>
+<h1 align="center"> USER HOME PAGE</h1>
+
+
+
+            <div class="wrapper" >
+
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-sm-7 text ">
+
+                            <h3>Current lessons</h3>
+
+
 
 <?php
-echo 'php';
+
 $db = DB::getInstance();
 $data = $db->getAll('lesson');
 
@@ -85,6 +99,12 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)) {
 
 
 ?>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>
     </div>
 

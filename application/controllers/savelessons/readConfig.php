@@ -26,7 +26,7 @@ class ConfigReader{
 				
 				$no_of_slides=DB::getInstance()->updateLessonTable('lesson',$id,array('no_of_slides'=>$currentLine[0]));
 				if($no_of_slides){
-					echo " no of slides added successfully";
+					#echo " no of slides added successfully";
 					$this->newLine++;
 				
 				}
@@ -42,7 +42,7 @@ class ConfigReader{
 				'end_time'=>$currentLine[2]
 				));
 				if ($config_data) {
-    				echo " config data added successfully";
+    				#echo " config data added successfully";
 				}
 				else{
 					echo " config data added not successed ";
@@ -51,7 +51,7 @@ class ConfigReader{
 	}
 	}
 	else{
-		echo "There was a blank line at line number <br />";
+		#echo "There was a blank line at line number <br />";
 	}
 	}
 
@@ -65,3 +65,45 @@ $rd=new ConfigReader();
 $rd->readConfigFile($id);
 session::delete('lesson_id');
 ?>
+
+
+
+<html>
+<head>
+	<title>UCSC VideoBay</title>
+
+<head>
+
+	<link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
+</head>
+
+
+
+<body>
+
+<body id="adminbody">
+<div id="adminwrapper">
+
+	<?php include '../../views/includes/admin_navbar.php' ?>
+
+	<div class="wrapper" >
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7 text ">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
