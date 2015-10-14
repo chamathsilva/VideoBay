@@ -73,13 +73,13 @@ else{
                 </div>
 
                 <div id = "left" class="col-sm-2 area">
-                    watch next
+                    Watch Next
                 </div>
                 <div id = "left" class="col-sm-2 area">
                     Most viewed
                 </div>
                 <div id = "left" class="col-sm-2 area">
-                    favorite
+                    Favourite
                 </div>
 
 
@@ -141,8 +141,7 @@ else{
     </div>  <!--container end-->
 </div>
 
-
-
+<br>
 <footer class="footer">
 
     <div class="container text-center">

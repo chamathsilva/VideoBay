@@ -24,7 +24,7 @@ html{
 }
 
 #lesson_play{
-    padding: 70px 0 20px 0;
+    padding: 70px 0 0px 0;
 }
 
 .top-content .text {
@@ -249,7 +249,7 @@ color: #FFF;
 /* FOOTER */
 
 .footer {
-        position:absolute;
+        position:relative;
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
@@ -344,7 +344,7 @@ margin-bottom: 50px
 /* lessons play topic and like bar */
 
 .detail-panal {
-    padding: 12px 25px 10px 25px;
+    padding: 1px 1px 1px 4px;
     background: #fff;
     -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
     text-align: left;
