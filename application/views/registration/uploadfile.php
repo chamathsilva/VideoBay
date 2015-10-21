@@ -43,8 +43,8 @@ if ($uploadOk == 0) {
     }
 
 }
-
-$file = fopen($_FILES["fileToUpload"]["name"],"r");
+$filename=$_FILES["fileToUpload"]["name"];
+$file = fopen("files/$filename","r");
 
 
 
@@ -56,9 +56,9 @@ while(! feof($file))
 	$list=fgetcsv($file);
 	insertUser($list);
 	//print_r($list);
-	foreach($list as $data){
-		echo "$data<br>";
-		}
+	//foreach($list as $data){
+		//echo "$data<br>";
+		//}
   //print_r(fgetcsv($file));
   echo "<br>";
   }
