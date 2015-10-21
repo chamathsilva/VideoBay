@@ -118,7 +118,7 @@
                 <a href="#"><i class="fa fa-fw fa-table"></i> Remove Lessons</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-edit"></i>Add Users</a>
+                <a href="../registration/api.php"><i class="fa fa-fw fa-edit"></i>Add Users</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-edit"></i>Remove Users</a>

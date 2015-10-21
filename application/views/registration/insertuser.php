@@ -1,6 +1,6 @@
 <?php
   
-require_once '/../../configs/core/init.php';
+require_once '../../configs/core/init.php';
 function insertUser($datalist=array()){
 	
 				$First_Name = $datalist[0] ;
