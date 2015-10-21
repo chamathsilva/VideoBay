@@ -43,8 +43,8 @@ if ($uploadOk == 0) {
     }
 
 }
-
-$file = fopen($_FILES["fileToUpload"]["name"],"r");
+$filename=$_FILES["fileToUpload"]["name"];
+$file = fopen("files/$filename","r");
 
 
 
