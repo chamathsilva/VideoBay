@@ -40,13 +40,13 @@ class FileHandler{
 				}
 					else{
                 		if ( move_uploaded_file( $tmpFldr, $fileDest ) ) {
-                    		echo 'file '.$f,' uploaded successfully<br>';
+                    		#echo 'file '.$f,' uploaded successfully<br>';
 					
                 		} 
                		 }
                		 
                	 
-				echo $fileDest;
+				#echo $fileDest;
                
 				}
             } 

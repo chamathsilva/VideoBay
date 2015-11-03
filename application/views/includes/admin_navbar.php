@@ -105,14 +105,19 @@
             </ul>
         </li>
     </ul>
+
+
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="admin nav navbar-nav side-nav">
-            <li>
-                <a href="Dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+        <ul id = "adminNav" class="admin nav navbar-nav side-nav">
+            <li id = "345">
+                <a href="../user/adminhome.php"><i class="fa fa-fw fa-dashboard" ></i> Dashboard</a>
             </li>
             <li>
+                <!--remove for new upload test-->
                 <a href="../uploadlessons/introduction.php"><i class="fa fa-fw fa-bar-chart-o"></i> add Lessons</a>
+                <!-- Ajax part -->
+                <!--<a href="addLessons.php"><i class="fa fa-fw fa-bar-chart-o"></i> add Lessons</a>-->
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-table"></i> Remove Lessons</a>
@@ -124,8 +129,14 @@
                 <a href="#"><i class="fa fa-fw fa-edit"></i>Remove Users</a>
             </li>
         </ul>
+
+
+
     </div>
     <!-- /.navbar-collapse -->
+
+
+
 </nav>
 
 

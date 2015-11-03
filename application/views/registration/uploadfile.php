@@ -1,7 +1,7 @@
 <?php
 require_once "insertuser.php";
 
-$target_dir = "files";
+$target_dir = "files/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);

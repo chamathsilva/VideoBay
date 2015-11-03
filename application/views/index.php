@@ -1,3 +1,14 @@
+<?php
+include("../models/config.inc.php");
+
+$results = mysqli_query($connecDB,"SELECT COUNT(*) FROM paginate");
+$get_total_rows = mysqli_fetch_array($results); //total records
+
+//break total records into pages
+$pages = ceil($get_total_rows[0]/$item_per_page);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +27,7 @@
         <link rel="stylesheet" href="../../public/css/ucscvideobay.css">
 
          <!-- Color Box -->
-        <link rel="stylesheet" href="../../public/css/colorbox.css" />
-
-
-        
-
-
+        <!--<link rel="stylesheet" href="../../public/css/colorbox.css" />-->
     </head>
     <body>
     <div class="wrapper" >
@@ -65,98 +71,65 @@ Academic Earth was launched on the premise that
 
                 </div>
             </div>
-
+<!--
   <div class="container-fluid">
+      <div class="container-scroll">
+          <div class="Middle">
+              <div class="container">
+                  <div class="col-lg-12 text2">
+                    <h1 >Lesson Gallery</h1>
+                  </div>
+                  <div id="results"></div>
+                  <div class="pagination"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  -->
 
-                        <div class="container-scroll">
-                            <div class="Middle">
-                     <div class="container">         
 
-            <div class="col-lg-12 text2">
-                <h1 >Lesson Gallery</h1>
-
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+        <div class="container">
+            <div class="row row-centered">
+                <div class="col-md-12 text2">
+                    <h1 >Lesson Gallery</h1>
+                    <div id="results"></div>
+                </div>
+                <div class="col-md-12 " style="text-align: center">
+                    <div class="pagination" ></div>
+                </div>
             </div>
         </div>
-                            </div>
-                        <div>
-                    </div>
 
-        </div>
-
-
-
-
-
-    </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../public/js/ucscvideobay.js"></script>
-        <script src="../../public/js/jquery.colorbox.js"></script>
+        <!--<script src="../../public/js/jquery.colorbox.js"></script>-->
 
         
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
         <script src="../../public/js/validation.js"></script>
+
+
+        <script type="text/javascript" src="../../public/js/jquery.bootpag.min.js"></script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#results").load("../models/fetch_pages.php");  //initial page number to load
+                $(".pagination").bootpag({
+                    total: <?php echo $pages; ?>,
+                    page: 1,
+                    maxVisible: 5
+                }).on("page", function(e, num){
+                    e.preventDefault();
+                    $("#results").prepend('<div class="loading-indication"><img src="ajax-loader.gif" /> Loading...</div>');
+                    $("#results").load("../models/fetch_pages.php", {'page':num});
+                });
+
+            });
+        </script>
+
+
 
 <footer class="footer"> 
     <div class="container text-center">

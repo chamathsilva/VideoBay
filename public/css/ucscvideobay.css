@@ -157,12 +157,21 @@ button.btn.like{
 /* NAVBAR STYLE */
 
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .side-nav > li > a {
 color: #FFF;
 }
 
 .navbar-inverse .navbar-brand {
 color: #FFF;
+}
+
+ul#adminNav .active{
+    color: black;
+    background-color: white;
+}
+
+.navbar2 #nav2 > .active > a {
+    color: red;
 }
 
 
@@ -197,7 +206,7 @@ color: #FFF;
     background-color: rgba(26, 171, 188, 0.36);
 }
 
-.navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .side-nav > li > a:focus {
     color: #fff;
     background-color: rgba(28, 114, 255, 0.29);
     boder-radius: 5px ;
@@ -224,7 +233,7 @@ color: #FFF;
 
 .Middle {
     overflow: auto;
-    height: auto;
+    /*height: auto;*/
     padding: .5rem;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
@@ -235,7 +244,7 @@ color: #FFF;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 640px;
+    /*height: 640px;*/
 }
 
 
@@ -505,7 +514,8 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        color: black !important;
+        background-color: rgb(253, 255, 253) !important;
     }
 }
 
@@ -599,4 +609,19 @@ ul.alert-dropdown {
     background-color:#7dcbf2;
     padding: 12px 25px 10px 25px;
     margin-top: 12px;
+}
+
+
+/*pagination*/
+
+#results .loading-indication{
+    background: #FFFFFF;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+.form-group {
+    margin-bottom: 10px;
 }

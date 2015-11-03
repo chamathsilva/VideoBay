@@ -57,8 +57,12 @@ echo '<p>You are an administrator!</p> ';
                         <li><a href="changepassword.php">Change password</a></li>
 
                     </u1>
+
+
+
                 </div>
             </div>
+
 
 
 

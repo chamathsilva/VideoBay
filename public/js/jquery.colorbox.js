@@ -303,7 +303,8 @@
 	function launch(element) {
 		var options;
 
-		if (!closing) {
+		if (closing) {
+		} else {
 
 			options = $(element).data(colorbox);
 
@@ -317,10 +318,10 @@
 				setClass(settings.get('className'));
 
 				// Show colorbox so the sizes can be calculated in older versions of jQuery
-				$box.css({visibility:'hidden', display:'block', opacity:''});
+				$box.css({visibility: 'hidden', display: 'block', opacity: ''});
 
 				$loaded = $tag(div, 'LoadedContent', 'width:0; height:0; overflow:hidden; visibility:hidden');
-				$content.css({width:'', height:''}).append($loaded);
+				$content.css({width: '', height: ''}).append($loaded);
 
 				// Cache values needed for size calculations
 				interfaceHeight = $topBorder.height() + $bottomBorder.height() + $content.outerHeight(true) - $content.height();
@@ -337,7 +338,7 @@
 				settings.w = Math.max((maxWidth !== false ? Math.min(initialWidth, setSize(maxWidth, 'x')) : initialWidth) - loadedWidth - interfaceWidth, 0);
 				settings.h = Math.max((maxHeight !== false ? Math.min(initialHeight, setSize(maxHeight, 'y')) : initialHeight) - loadedHeight - interfaceHeight, 0);
 
-				$loaded.css({width:'', height:settings.h});
+				$loaded.css({width: '', height: settings.h});
 				publicMethod.position();
 
 				trigger(event_open);

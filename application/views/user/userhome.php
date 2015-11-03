@@ -68,14 +68,21 @@ $db = DB::getInstance();
 $data = $db->getAll('lesson');
 
 
-
 while($row = $data->fetch(PDO::FETCH_ASSOC)) {
     $id = $row['lesson_id'];
     $name = $row['name'];
 
 
 
-    echo "</br><a href ='../lessonsplay/lessonPalyPanal.php?id=$id'> $name </a> ";
+    #echo "</br><a href ='../lessonsplay/lessonPalyPanal.php?id=$id'> $name </a> ";
+    ?>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a class="thumbnail" href="../lessonsplay/lessonPalyPanal.php?id=<?php echo $id;?>" >
+            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+        </a>
+        <h3> Title</h3>
+    </div>
+                            <?php
 }
 
 /*

@@ -6,6 +6,13 @@ $(document).ready(function(){
         
     });
 
+    $("#introduction_next").click(function(){
+        url = "../../models/saveForm.php";
+        $( location ).attr("href", url);
+        return false;
+
+    });
+
     $("#flip").click(function(){
         $("#panel").slideToggle("fast");
         $("#navigator").slideToggle("fast");
@@ -17,7 +24,23 @@ $(document).ready(function(){
         $("p").show();
     });
 
-	$(".show-video").colorbox({iframe:true, innerWidth:650, innerHeight:390});
+	//$(".show-video").colorbox({iframe:true, innerWidth:650, innerHeight:390});
+
+
+    $(function() {
+        $('#nav2 li a').click(function() {
+            $('#nav2 li').removeClass();
+            $($(this).attr('href')).addClass('active');
+        });
+    });
+
+
+    $(function() {
+        $('#adminNav li a').click(function() {
+            $('#adminNav li').removeClass();
+            $($(this).attr('href')).addClass('active');
+        });
+    });
 
 
 
@@ -51,7 +74,7 @@ $(document).ready(function(){
 
         }
 
-    }
+    };
     // Initializing ///
 
     $(document).ready(function () {
@@ -64,7 +87,7 @@ $(document).ready(function(){
 
 
 /* ------------------user profile -----------------*/
-
+/*
 $(document).ready(function() {
     var panels = $('.user-infos');
     var panelsButton = $('.dropdown-user');
@@ -99,3 +122,4 @@ $(document).ready(function() {
         alert("This is a demo.\n :-)");
     });
 });
+*/

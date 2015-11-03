@@ -34,15 +34,15 @@ public function setToDB(){
 				));
 				
 				if($lesson_d){
-					echo "lesson form added successfully";
+					#echo "lesson form added successfully";
 				}
 				else{
-					echo " lesson form added not successed ";
+					#echo " lesson form added not successed ";
 				}
 			
 			}
 			else{
-				echo " all fields are required ";
+				#echo " all fields are required ";
 			}
 			
 		
@@ -101,21 +101,58 @@ $f->createFolder('../../data/uploaded_lessons/',$l_id,'');
 
 	<body id="adminbody">
 	<div id="adminwrapper">
-
+		<div class="container-fluid">
 		<?php include '../views/includes/admin_navbar.php' ?>
 
 		<div class="wrapper" >
 
-			<div class="container">
+
 				<div class="row">
+					<!--
 					<div class="col-sm-7 text ">
 
-		<?php
-		require ("../views/uploadlessons/upload_video.php");
-		?>
+						<form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
+							<label for="fileselect">upload video files </label>
+							<input type="file" name="files[]" id="file" multiple="multiple">
+							<input type="submit" value="upload" name="upload"><br><br>
+						</form>
 
+
+
+
+					</div> -->
+
+
+					<div class="col-lg-6">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3>upload video files</h3>
+								<p>Select the video file </p>
+							</div>
+							<div class="form-top-right">
+								<i class="fa fa-sign-in"></i>
+							</div>
+						</div>
+						<div id = "sign-up-form"class="form-bottom">
+							<form action="../controllers/savelessons/saveVideo.php" method="POST" enctype="multipart/form-data">
+								<div class="row">
+								<div class="col-xs-12">
+									<input type="file" name="files[]" id="file" multiple="multiple">
+								</div>
+									<br><br>
+
+										<div class="col-xs-6">
+											<button id = "Cancel"type="submit" class="btn full">Cancel</button>
+										</div>
+
+										<div class="col-xs-6 ">
+											<button id = "" onclick='this.form.action = "../controllers/savelessons/saveVideo.php"' class="btn full ">Next</button>
+										</div>
+								</div>
+							</form>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -123,6 +160,10 @@ $f->createFolder('../../data/uploaded_lessons/',$l_id,'');
 
 
 
-
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!--<script src="../../../library/Jquery/jquery.js"></script>-->
+	<script src="../../../public/js/ucscvideobay.js"></script>
+	</body>
 	</body>
 </html>

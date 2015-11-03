@@ -64,6 +64,8 @@ fclose($myfile);
 $rd=new ConfigReader();
 $rd->readConfigFile($id);
 session::delete('lesson_id');
+
+
 ?>
 
 
@@ -94,6 +96,20 @@ session::delete('lesson_id');
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-7 text ">
+					<h2>Successfully Uploaded</h2>
+
+					<form action="../../controllers/savelessons/readConfig.php" method="POST" enctype="multipart/form-data">
+						<div class="row">
+							<div class="col-xs-6 ">
+								<button id = "" onclick='this.form.action = "../../views/user/adminhome.php"' class="btn full ">Done</button>
+							</div>
+							<div class="col-xs-6 ">
+								<button id = "" onclick='this.form.action = "../../views/lessonsplay/lessonPalyPanalAdmin.php?id=<?php echo $id;?>"' class="btn full ">Preview Lesson</button>
+							</div>
+						</div>
+
+					</form>
+
 
 				</div>
 			</div>
