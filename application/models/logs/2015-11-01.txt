@@ -1,0 +1,7 @@
+Time : 21:28:52
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.uhghjhser' doesn't exist
+Raw SQL : SELECT * FROM uhghjhser
+
+Time : 21:17:14
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.uhghjhser' doesn't exist
+Raw SQL : SELECT * FROM uhghjhser
