@@ -3,7 +3,11 @@ include "lessonFolders.php";
 include "../Session.php";
 
 class SlidesHandler extends FileHandler{
+<<<<<<< HEAD
 	public $valid_files=array("jpg","JPG");
+=======
+	public $valid_files=array("jpg");
+>>>>>>> master
  	public $max_size=10240000;
 	public $column="slides_path";
 }
@@ -12,6 +16,7 @@ $sh=new SlidesHandler();
 session_start();
 $id=Session::get('lesson_id');
 $fol=new Folder();
+<<<<<<< HEAD
 $fol->createFolder('../../../data/uploaded_lessons/',$id,'slides');
 $sh->do_upload($id,"slides");
 #include "../../views/uploadlessons/upload_config.php";
@@ -113,3 +118,10 @@ $sh->do_upload($id,"slides");
 
 </body>
 </html>
+=======
+$fol->createFolder($id,'slides');
+$sh->do_upload($id,"slides");
+include "../../views/uploadlessons/upload_config.php";
+
+?>
+>>>>>>> master

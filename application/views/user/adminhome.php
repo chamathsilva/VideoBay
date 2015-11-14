@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!--<?php
+=======
+<?php
+>>>>>>> master
 require_once '../../configs/core/init.php';
 echo '<p>You are an administrator!</p> ';
 ?>
@@ -9,6 +13,7 @@ echo '<p>You are an administrator!</p> ';
         <li><a href="changepassword.php">Change password</a></li>
     
     </u1>
+<<<<<<< HEAD
 
 
 -->
@@ -87,3 +92,5 @@ echo '<p>You are an administrator!</p> ';
 
 
 
+=======
+>>>>>>> master

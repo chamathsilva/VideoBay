@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <?php 
 include "lessonFolders.php";
+=======
+<?php include "lessonFolders.php";
+>>>>>>> master
 include "saveLesson.php";
 
 include "../Session.php";
@@ -16,13 +20,18 @@ session_start();
 $id=Session::get('lesson_id');
 
 $fo=new Folder();
+<<<<<<< HEAD
 $fo->createFolder('../../../data/uploaded_lessons/',$id,'videos');
+=======
+$fo->createFolder($id,'videos');
+>>>>>>> master
 
 $vh->do_upload($id,"videos");
 
 ?>
 
 <?php
+<<<<<<< HEAD
 #include "../../views/uploadlessons/upload_slide.php";
 ?>
 
@@ -112,3 +121,7 @@ $vh->do_upload($id,"videos");
 
 </body>
 </html>
+=======
+include "../../views/uploadlessons/upload_slide.php";
+?>
+>>>>>>> master

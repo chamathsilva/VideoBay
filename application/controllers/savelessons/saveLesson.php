@@ -15,7 +15,11 @@ class FileHandler{
             if ( !empty( $_FILES )) {
             	
                 //$userFolder="C:/xampp/htdocs/series/ucsc_video_bay/uploaded_lessons/";
+<<<<<<< HEAD
               $userFolder='../../../data/uploaded_lessons/';
+=======
+              $userFolder="C:/xampp/htdocs/series/VideoBay/application/controllers/savelessons/uploaded_lessons/";
+>>>>>>> master
 				
 				foreach($_FILES['files']['name'] as $f=>$name){
 					   
@@ -40,13 +44,21 @@ class FileHandler{
 				}
 					else{
                 		if ( move_uploaded_file( $tmpFldr, $fileDest ) ) {
+<<<<<<< HEAD
                     		#echo 'file '.$f,' uploaded successfully<br>';
+=======
+                    		echo 'file '.$f,' uploaded successfully<br>';
+>>>>>>> master
 					
                 		} 
                		 }
                		 
                	 
+<<<<<<< HEAD
 				#echo $fileDest;
+=======
+				echo $fileDest;
+>>>>>>> master
                
 				}
             } 

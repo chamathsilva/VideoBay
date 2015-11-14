@@ -1,11 +1,17 @@
 <?php 
 
+<<<<<<< HEAD
 require_once '../configs/core/init.php';
 /*
 require '/../configs/core/init.php';
 include "/../controllers/Session.php";
 require "/../controllers/Input.php"; */
 
+=======
+require '/../configs/core/init.php';
+include "/../controllers/Session.php";
+require "/../controllers/Input.php";
+>>>>>>> master
 class SendData{
 	public $l_id;
 	public $description;
@@ -34,15 +40,26 @@ public function setToDB(){
 				));
 				
 				if($lesson_d){
+<<<<<<< HEAD
 					#echo "lesson form added successfully";
 				}
 				else{
 					#echo " lesson form added not successed ";
+=======
+					echo "lesson form added successfully";
+				}
+				else{
+					echo " lesson form added not successed ";
+>>>>>>> master
 				}
 			
 			}
 			else{
+<<<<<<< HEAD
 				#echo " all fields are required ";
+=======
+				echo " all fields are required ";
+>>>>>>> master
 			}
 			
 		
@@ -79,6 +96,7 @@ $l_id=$send->getData();
 
 Session::put('lesson_id',$l_id);
 
+<<<<<<< HEAD
 require("../controllers/savelessons/lessonFolders.php"); // Recheck
 $f=new Folder();
 $f->createFolder('../../data/uploaded_lessons/',$l_id,'');
@@ -167,3 +185,11 @@ $f->createFolder('../../data/uploaded_lessons/',$l_id,'');
 	</body>
 	</body>
 </html>
+=======
+require("/../controllers/savelessons/lessonFolders.php");
+$f=new Folder();
+$f->createFolder($l_id,'');
+require ("/../views/uploadlessons/upload_video.php");
+?>
+
+>>>>>>> master
