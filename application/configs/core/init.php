@@ -5,7 +5,7 @@ $GLOBALS['config'] = array(
 'mysql' =>array(
 	'host'=> 'localhost',// 
 	'User_Name'=>'root',
-	'Password' => 'root', //
+	'Password' => '', //
 	'db'=> 'database_user'
 	),
 'remember' => array(

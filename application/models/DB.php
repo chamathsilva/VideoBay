@@ -1,6 +1,7 @@
 <?php
 
 
+
 class DB{
 	private static $_instance = null;
 	private $_pdo,
@@ -152,6 +153,8 @@ class DB{
 				}
 				return false;
 			}	
+			
+			
 
 	       public function updateLessonTable($table,$id,$fields){
 			$set = '';
@@ -164,6 +167,9 @@ class DB{
 					$x++;
 				}
 				
+				
+
+				
 			$sql = "UPDATE {$table} SET {$set} WHERE lesson_id = {$id}";
 			if(!$this->query($sql,$fields)->error()){
 				
@@ -172,6 +178,12 @@ class DB{
 				return false;
 			}		
 				
+		public function Search($keyWord){
+			
+				$search_sql=$this->_pdo->query("SELECT * FROM lesson WHERE description LIKE '%".$keyWord."%' OR category LIKE '%".$keyWord."%' "); 
+				return $search_sql;
+			
+		}
 		public function results(){
 			return $this->_results;
 			}

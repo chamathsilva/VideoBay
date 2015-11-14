@@ -26,13 +26,19 @@
             <div class="navbar-collapse collapse" id="navbar-collapsible">
 
                 <div class="col-md-7 col-sm-4 ">
-                    <div class="input-group" style="padding-top:10px;align-content: center;padding-left: 10px">
-                        <input type="text" id="#innerU" class="form-control" placeholder="Search for...">
+					<form name="search" method="post" action="../Search/SearchResults.php" role="search">
+                    
+					<div class="input-group" style="padding-top:10px;align-content: center;padding-left: 10px">
+                        <input type="text" id="#innerU" class="form-control" placeholder="Search for..." name="search">
                         <span class="input-group-btn">
-                         <button class="btn btn-default innerU" id="#innerU" type="button" style="height:33px;">Go!</button>
+                         <button type= "submit" class="btn btn-default innerU" id="#innerU" type="button" style="height:33px;">Go!</button>
                         </span>
                     </div>
+					
+					</form>
                 </div>
+				
+				
                 <div class="col-sm-6 col-md-4">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="userhome.php">Home</a></li>
@@ -61,6 +67,7 @@
         </div>
     </div>
     </div>
+	<br>
 
 
 
