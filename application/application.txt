@@ -1,1 +1,0 @@
- This directory contains your application. It will house the MVC system

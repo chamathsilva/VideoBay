@@ -1,1 +1,0 @@
-This directory contains application tests. These could be hand-written, PHPUnit tests, Selenium-RC based tests or based on some other testing framework
