@@ -135,6 +135,71 @@ class DB{
 				return false;
 			}
 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		public function update($table,$id,$fields){
 			$set = '';
 			$x=1;
@@ -153,11 +218,8 @@ class DB{
 				}
 				return false;
 			}	
-<<<<<<< HEAD
+
 			
-			
-=======
->>>>>>> master
 
 	       public function updateLessonTable($table,$id,$fields){
 			$set = '';
@@ -169,18 +231,13 @@ class DB{
 					}
 					$x++;
 				}
-				
-<<<<<<< HEAD
-				
+	
 
-				
-=======
->>>>>>> master
 			$sql = "UPDATE {$table} SET {$set} WHERE lesson_id = {$id}";
 			if(!$this->query($sql,$fields)->error()){
 				
 				return true;
-<<<<<<< HEAD
+
 			}
 				return false;
 			}		
@@ -191,12 +248,11 @@ class DB{
 				return $search_sql;
 			
 		}
-=======
 				}
 				return false;
 			}		
 				
->>>>>>> master
+
 		public function results(){
 			return $this->_results;
 			}
