@@ -3,4 +3,4 @@
 host = localhost
 user = root
 password = root
-dbname = database_user
+dbname = pagination

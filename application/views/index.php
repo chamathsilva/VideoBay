@@ -1,7 +1,7 @@
 <?php
 include("../models/config.inc.php");
 
-$results = mysqli_query($connecDB,"SELECT COUNT(*) FROM paginate");
+$results = mysqli_query($connecDB,"SELECT COUNT(*) FROM lesson");
 $get_total_rows = mysqli_fetch_array($results); //total records
 
 //break total records into pages
@@ -41,16 +41,8 @@ $pages = ceil($get_total_rows[0]/$item_per_page);
                             <h1><strong>UCSC VideoBay</strong></h1>
                             <div class="description">
                                 <p>
-                                    Rethink Education
-Academic Earth was launched on the premise that
- everyone deserves access to a world-class education. 
- In 2009, we built the first collection of free online 
- college courses from the world’s top universities. The world of 
- open education has exploded since then, so today our curated lists 
- of online courses are hand selected by our staff to show you the
-  very best offerings by subject area. We also make sure there is 
-  something for everyone: whether you want to explore a new topic or 
-  advance in your current field, we bring the amazing world of academia to you for free.
+UCSS VideoBay is a web based system which creates a learning environment for the students and lecturers and it also creates a virtual bridge to link students and lectures. 
+  
                                 </p>
 
                                 <!--<button class="show-video" href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent">Watch the Video</button>-->

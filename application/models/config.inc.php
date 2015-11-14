@@ -2,7 +2,7 @@
 
 $db_username = 'root';
 $db_password = 'root';
-$db_name = 'pagination';
+$db_name = 'database_user';
 $db_host = 'localhost';
 $item_per_page = 8;
 
