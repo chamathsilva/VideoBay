@@ -17,7 +17,9 @@
         <a href="userhome.php" class="navbar-brand logo">b</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-        <form class="navbar-form navbar-left">
+	
+        <form class ="navbar-form navbar-left name="search" method="post" action="../Search/SearchResults.php" role="search">
+	
             <div class="input-group input-group-sm" style="max-width:360px;">
                 <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
                 <div class="input-group-btn">
@@ -25,6 +27,7 @@
                 </div>
             </div>
         </form>
+	
         <ul class="nav navbar-nav">
             <li>
                 <a href="userhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>

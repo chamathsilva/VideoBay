@@ -171,7 +171,13 @@ class DB{
 			}
 				return false;
 			}		
-				
+			
+		public function Search($keyWord){
+			
+				$search_sql=$this->_pdo->query("SELECT * FROM lesson WHERE description LIKE '%".$keyWord."%' OR category LIKE '%".$keyWord."%' "); 
+				return $search_sql;
+			
+		}
 		public function results(){
 			return $this->_results;
 			}
