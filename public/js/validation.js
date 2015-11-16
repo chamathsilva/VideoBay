@@ -109,5 +109,23 @@ $(function(){
 		},
 	})
 
+	$("#add_new_lesson").validate({
+		rules:{
+			name:{
+				required: true
+
+			},
+			description: {
+				required: true
+			},
+			lecture: {
+				required: true
+			},
+			category: {
+				required: true
+			}
+		}
+	})
+
 
 });

@@ -83,7 +83,7 @@ if($user->isLoggedIn()){
 
                                     <div class="form-group">
                                         <label class="sr-only" for="form-last-name">Password</label>
-                                        <input type="text" name="Password" id="Password" placeholder="Password" class="form-last-name form-control" id="form-last-name">
+                                        <input type="password" name="Password" id="Password" placeholder="Password" class="form-last-name form-control" id="form-last-name">
                                     </div>
 
                                     <div class="row">
@@ -103,11 +103,11 @@ if($user->isLoggedIn()){
 
                                     <div class="row">
                                         <div class="col-xs-6">
-                                           <button type="submit" class="btn full">Sign in!</button>
+                                           <button type="submit" class="btn full">Sign in !</button>
                                         </div>
                                          <div class="col-xs-6 ">
                                          	
-                                            <button id = "registration" class="btn full ">Sign up now!</button>
+                                            <button id = "registration" class="btn full ">Sign up now !</button>
                                         </div>
                                     </div>
                                 </form>

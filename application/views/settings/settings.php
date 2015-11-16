@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>  
 	<head>
+<<<<<<< HEAD:application/views/user/settings.php
 
         <?php
         require_once '../../configs/core/init.php';
@@ -17,15 +18,27 @@
 
         <!-- Color Box -->
         <link rel="stylesheet" href="../../../public/css/colorbox.css" />
+=======
+		
+		<?php include('../includes/docs.php');?>
+>>>>>>> master:application/views/settings/settings.php
 	
 	</head>
 	
 	<body>
+<<<<<<< HEAD:application/views/user/settings.php
     <?php
     include '../../views/includes/navbar_user.php'
     ?>
 		<div class="row">
 			<div class= "container-fluid col-md-offset-8">
+=======
+			<?php include ('../user/user_header.php');?>
+			
+		<div class="row">
+			<div class= "container-fluid col-md-offset-8">
+				<?php include ('../user/Advertisements.php'); ?>
+>>>>>>> master:application/views/settings/settings.php
 		
 			</div>
 			<div class= "container-fluid">
@@ -39,9 +52,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#name">Update Name</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="name" class="panel-collapse collapse">
 								<div class="panel-body">
@@ -66,9 +79,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#email">Change Email</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="email" class="panel-collapse collapse">
 								<div class="panel-body">
@@ -90,9 +103,9 @@
 							
 							<div class="panel panel-primary">
 							  <div class="panel-heading">
-								<h4 class="panel-title">
+								<h3 class="panel-title">
 								  <a data-toggle="collapse" data-parent="#accordion" href="#password">Change password</a>
-								</h4>
+								</h3>
 							  </div>
 							  <div id="password" class="panel-collapse collapse">
 								<div class="panel-body">	
@@ -127,6 +140,7 @@
 									
 			</div>
 			
+<<<<<<< HEAD:application/views/user/settings.php
 		</div>
 
 
@@ -139,6 +153,19 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!--<script src="../../../library/Jquery/jquery.js"></script>-->
     <script src="../../../public/js/ucscvideobay.js"></script>
+=======
+		</div>	
+									
+												
+									
+			
+			
+			
+			
+			 <?php include ('../includes/footer.php');?> 
+			<?php include('../includes/js.php');?>
+			
+>>>>>>> master:application/views/settings/settings.php
 	
 	</body>
 	</html>
