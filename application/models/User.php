@@ -18,7 +18,7 @@ class User{
 					$this->_isLoggedIn=true;
 					}else{
 						//process logout
-						redirect::to('index.php');
+						//redirect::to('index.php');
 					}
 				
 				}

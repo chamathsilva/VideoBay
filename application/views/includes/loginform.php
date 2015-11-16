@@ -23,8 +23,7 @@ if(Input::exists()){
 					echo '<p> Sorry logging in failed.</p>';
 					}
 		}else{
-			echo "ERROR";
-			Die();
+			
 							
 				}
 		}
