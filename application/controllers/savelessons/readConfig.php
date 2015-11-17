@@ -42,6 +42,13 @@ class ConfigReader{
 				'end_time'=>$currentLine[2]
 				));
 				if ($config_data) {
+					if(!((empty($currentLine[3])))){
+						$subt=DB::getInstance()->insert('subtitles',array(
+							'lesson_id'=>$id,
+							'slide_id'=>$currentLine[0],
+							'sub_title'=>$currentLine[3]
+						));
+					}
     				#echo " config data added successfully";
 				}
 				else{
