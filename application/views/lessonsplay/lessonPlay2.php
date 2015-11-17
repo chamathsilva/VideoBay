@@ -99,7 +99,7 @@ else{
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
                 <?php
-                include '../../views/includes/navbaruser_new.php'
+                include '../../views/includes/navbaruser_newlessonplay.php'
                 ?>
                 <div class="full ">
                     <div class="container-fluid">
