@@ -8,14 +8,6 @@ $pages = ceil($get_total_rows[0]/$item_per_page);
 
 ?>
 
-<?php
-require_once '../configs/core/init.php';
-$user =new User();
-if($user->isLoggedIn()){
-    redirect::to('user/userhome.php');
-    die;
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">

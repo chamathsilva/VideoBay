@@ -18,9 +18,7 @@ if (isset($_GET['id'])){
         //$topics = $db->getTpoicsById($id);
         //echo var_dump($topics);
 
-
-
-
+        
 
         if ($slid_data = $db->getAllBySortOrder($id)){
             if ($topics = $db->getTpoicsById($id)){
@@ -97,6 +95,12 @@ else{
                     ?>
                 </ul>
 
+                <ul class="nav hidden-xs">
+                    <div class="row">
+                    <li style="margin-bottom: 15px; margin-top:10px; ">Watch Next</li>
+                    <div id="watch_next"></div>
+                        </div>
+                </ul>
 
             </div>
             <!-- main right col -->
@@ -198,6 +202,12 @@ else{
         $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
         panal.slideDown(function(){panal.removeClass("hide");});
 
+        //load  lessons to the watch next.
+        $("#watch_next").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#watch_next").load("../../models/fetch_lessons_withlimit.php");
+
+
+
         // this is for enter press , this call on click event
         $('#search-form').submit(function(e) {
             var $this = $(this);
@@ -218,6 +228,13 @@ else{
 
     });
 </script>
+
+
+
+
+
+
+
 
 
 
