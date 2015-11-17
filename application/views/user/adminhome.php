@@ -1,6 +1,9 @@
 <!--<?php
 require_once '../../configs/core/init.php';
 echo '<p>You are an administrator!</p> ';
+$user =new User();
+	if($user->isLoggedIn()){
+	?>
 ?>
 <p>Hello <a href="profile.php?user=<?php echo$_GET['name'] ; ?>"><?php echo$_GET['name'] ; ?></a>!</p>
     <u1>
@@ -78,6 +81,13 @@ echo '<p>You are an administrator!</p> ';
 <script src="../../../public/js/ucscvideobay.js"></script>
 </body>
 </html>
+<?php
+	}else{
+		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
+		}
+	
+?>
+
 
 
 

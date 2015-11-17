@@ -1,5 +1,8 @@
 <?php
 require_once '../../configs/core/init.php';
+$user =new User();
+	if($user->isLoggedIn()){
+	
 
 
 ?>
@@ -127,3 +130,9 @@ require_once '../../configs/core/init.php';
 
 </body>
 </html>
+<?php
+	}else{
+		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
+		}
+	
+?>

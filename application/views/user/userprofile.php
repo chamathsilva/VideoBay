@@ -6,6 +6,10 @@
  * Time: 11:24 PM
  */
 ?>
+<?php
+$user =new User();
+	if($user->isLoggedIn()){
+	?>
 
 <html>
 <head>
@@ -91,3 +95,9 @@
 <script src="../../../public/js/ucscvideobay.js"></script>
 </body>
 </html>
+<?php
+	}else{
+		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
+		}
+	
+?>
