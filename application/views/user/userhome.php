@@ -146,6 +146,9 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)) {
 =======
 <?php
 require_once '../../configs/core/init.php';
+	$user =new User();
+	if($user->isLoggedIn()){
+	?>
 
 
 ?>
@@ -156,5 +159,11 @@ require_once '../../configs/core/init.php';
         <li><a href="changepassword.php">Change password</a></li>
     
     </u1>
-    
+	
+<?php
+	}else{
+		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
+		}
+	
+?>
 >>>>>>> master
