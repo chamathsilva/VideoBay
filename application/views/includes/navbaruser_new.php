@@ -17,16 +17,15 @@
         <a href="userhome.php" class="navbar-brand logo">b</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-	
-        <div class ="navbar-form navbar-left id="search">
-	
-            <form class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
+        <form class="navbar-form navbar-left" id = "search-form">
+            <div class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
                 <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
                 <div class="input-group-btn">
                     <button id="serchbut" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+
 	
         <ul class="nav navbar-nav">
             <li>
@@ -53,3 +52,4 @@
     </nav>
 </div>
 <!-- /top nav -->
+<!---------->

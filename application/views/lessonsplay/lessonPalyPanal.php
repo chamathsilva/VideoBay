@@ -117,10 +117,10 @@ else{
             <div class="row slidNavigator">
                 <!--p id="p1">Hello World!</p-->
                 <div class="col-sm-10">
-                    <div class="detail-panal" style="border:1px solid black;width:100%;height:200px;overflow-y:hidden;overflow-x:scroll;">
+                    <div class="detail-panal" style="border:1px solid black;width:100%;height:150px;overflow-y:hidden;overflow-x:scroll;">
 
                         <nav id="menu" style="width:100000%;">
-                            <ul>
+                            <ul style="list-style: none;">
                                 <?php
                                 $index = 1;
                                 while ($index <= $no_of_slid){
@@ -134,9 +134,19 @@ else{
                                     $index += 1;
                                 }
                                 ?>
+
+                                <li>hello</li>
+                                <li>hello</li>
+                                <li>hello</li><li>hello</li>
+                                <li>hello</li><li>hello</li>
                             </ul>
+
+
+
                         </nav>
                     </div>
+
+
                 </div>
             </div>
         </div>
