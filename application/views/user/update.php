@@ -81,9 +81,7 @@ require_once '../../configs/core/init.php';
 
 <body>
 
-<?php
-include '../../views/includes/navbar_user.php'
-?>
+
 <div class="container">
     <div class="mid">
 
