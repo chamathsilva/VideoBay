@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.3
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 14, 2015 at 12:52 PM
--- Server version: 5.6.24
--- PHP Version: 5.6.8
+-- Host: 127.0.0.1
+-- Generation Time: Nov 17, 2015 at 06:06 AM
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -221,10 +221,10 @@ INSERT INTO `configdata` (`lesson_id`, `slide_id`, `start_time`, `end_time`) VAL
 --
 
 CREATE TABLE IF NOT EXISTS `groups` (
-  `User_ID` int(11) NOT NULL,
+`User_ID` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `permission` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `groups`
@@ -246,9 +246,9 @@ CREATE TABLE IF NOT EXISTS `lesson` (
   `lecture` varchar(30) NOT NULL,
   `category` varchar(11) NOT NULL,
   `no_of_slides` int(11) NOT NULL,
-  `lesson_id` int(11) NOT NULL,
+`lesson_id` int(11) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=94 ;
 
 --
 -- Dumping data for table `lesson`
@@ -264,11 +264,39 @@ INSERT INTO `lesson` (`name`, `description`, `lecture`, `category`, `no_of_slide
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `subtitles`
+--
+
+CREATE TABLE IF NOT EXISTS `subtitles` (
+  `lesson_id` int(11) NOT NULL,
+  `slide_id` int(11) NOT NULL,
+  `sub_title` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subtitles`
+--
+
+INSERT INTO `subtitles` (`lesson_id`, `slide_id`, `sub_title`) VALUES
+(78, 2, 'sub1\r\n'),
+(78, 3, 'sub2\r\n'),
+(80, 2, 'sub1\r\n'),
+(80, 3, 'sub2\r\n'),
+(81, 2, 'sub1\r\n'),
+(81, 3, 'sub2\r\n'),
+(82, 2, 'sub1\r\n'),
+(82, 3, 'sub2\r\n'),
+(83, 2, 'sub1\r\n'),
+(83, 3, 'sub2\r\n');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `User_ID` int(11) NOT NULL,
+`User_ID` int(11) NOT NULL,
   `First_Name` varchar(20) NOT NULL,
   `Last_Name` varchar(20) NOT NULL,
   `User_Name` varchar(30) NOT NULL,
@@ -276,7 +304,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `E_mail` varchar(30) NOT NULL,
   `group` int(11) NOT NULL,
   `salt` varchar(32) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `user`
@@ -299,10 +327,10 @@ INSERT INTO `user` (`User_ID`, `First_Name`, `Last_Name`, `User_Name`, `Password
 --
 
 CREATE TABLE IF NOT EXISTS `users_sessions` (
-  `User_ID` int(11) NOT NULL,
+`User_ID` int(11) NOT NULL,
   `users_id` int(11) NOT NULL,
   `hash` varchar(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Indexes for dumped tables
@@ -312,25 +340,31 @@ CREATE TABLE IF NOT EXISTS `users_sessions` (
 -- Indexes for table `groups`
 --
 ALTER TABLE `groups`
-  ADD PRIMARY KEY (`User_ID`);
+ ADD PRIMARY KEY (`User_ID`);
 
 --
 -- Indexes for table `lesson`
 --
 ALTER TABLE `lesson`
-  ADD PRIMARY KEY (`lesson_id`);
+ ADD PRIMARY KEY (`lesson_id`);
+
+--
+-- Indexes for table `subtitles`
+--
+ALTER TABLE `subtitles`
+ ADD PRIMARY KEY (`lesson_id`,`slide_id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`User_ID`);
+ ADD PRIMARY KEY (`User_ID`);
 
 --
 -- Indexes for table `users_sessions`
 --
 ALTER TABLE `users_sessions`
-  ADD PRIMARY KEY (`User_ID`);
+ ADD PRIMARY KEY (`User_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -340,22 +374,22 @@ ALTER TABLE `users_sessions`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `lesson`
 --
 ALTER TABLE `lesson`
-  MODIFY `lesson_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
+MODIFY `lesson_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=59;
+MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=59;
 --
 -- AUTO_INCREMENT for table `users_sessions`
 --
 ALTER TABLE `users_sessions`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
