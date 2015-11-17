@@ -54,6 +54,8 @@ else{
 <body>
 <div class="wrapper" >
     <?php include '../includes/navbar.php' ?>
+
+
     <div class="inner-bg" id="lesson_play">
         <div class="container-fluid">
             <div class="row">

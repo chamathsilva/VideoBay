@@ -1,122 +1,51 @@
 
 <?php
+
 require_once '../../configs/core/init.php';
 
 
-?>
-<html>
-    <head>
+    $keyWord = $_POST['srch-term'];
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>UCSC VideoBay</title>
+    if(empty($keyWord)) {
 
+        echo "Enter a keyword";
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../../public/css/form-elements.css">
-        <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
-        <link rel="stylesheet" href="../../../public/css/navbaruser.css">
-        <!--<link rel="stylesheet" type="text/css" href="../../../public/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="../../../public/slick/slick-theme.css"/>
+        //create JSON data
+        $output = json_encode(array(
+            'type'=>'error',
+            'text' => 'Sorry Request must be Ajax POST'
+        ));
 
-        <!-- Color Box -->
-        <link rel="stylesheet" href="../../../public/css/colorbox.css" />
+        //echo $output;
+    }
 
+    else {
+        $db = DB::getInstance();
+        $data =$db->search($keyWord);
 
+        while($row = $data->fetch(PDO::FETCH_ASSOC)) {
+            $id = $row['lesson_id'];
+            $name = $row['name'];
+            $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/1.jpg';
 
+            echo '<div class="col-lg-3 col-md-4 col-xs-6 text2">';
+            echo '<a class="thumbnail" href="../lessonsplay/lessonPalyPanal.php?id='."$id".'" >';
+            echo '<img class="img-responsive" src='."$src_path".' alt="">';
+            echo '<h4>'."$name".'</h4>';
+            echo'</a>';
+            echo'</div>';
 
+            //create JSON data
+            $output = json_encode(array(
+                'type'=>'result',
+                'id' => $id,
+                'name' => $name,
+                'src_path' => $src_path
+            ));
 
-    </head>
-
-
-<body>
-
-<div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-
-
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-
-            <!-- side bar -->
-            <?php
-            include '../../views/includes/sidebar.php'
-            ?>
-            </div>
-            <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
-                <?php
-                include '../../views/includes/navbaruser_new.php'
-                ?>
-
-<div class="container">
-    <div class="mid">
-       
-
-<!-- new function -->
-<h1 align="center"> SEARCH RESULTS</h1>
-
-
-
-            <div class="wrapper" >
-
-                <div class="container">
-                    <div class="row">
-
-
-                        <div class="col-sm-7 text ">
-
-                           
-
-<?php
-
-$keyWord = $_POST['srch-term'];
-
-if(empty($keyWord)) {
-
-	 echo "Enter a keyword";
-}
-
-else {
-	
-	$db = DB::getInstance();
-	$data =$db->search($keyWord);
-
-	while($row = $data->fetch(PDO::FETCH_ASSOC)) {
-				echo $row['name']." <br>" ;
-	}
-	
-	
-	
-
-
-}
-
-
-
-
-
-
+            //echo $output;
+        }
+    }
 ?>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-</div>
-    </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<!--<script src="../../../library/Jquery/jquery.js"></script>-->
-<script src="../../../public/js/ucscvideobay.js"></script>
-</body>
-</html>
-
-
-</body>
-</html>

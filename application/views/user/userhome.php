@@ -34,101 +34,54 @@ require_once '../../configs/core/init.php';
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
-
-
             <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-
             <!-- side bar -->
             <?php
-            include '../../views/includes/sidebar.php'
+                include '../../views/includes/sidebar.php'
             ?>
             </div>
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
                 <?php
-                include '../../views/includes/navbaruser_new.php'
+                    include '../../views/includes/navbaruser_new.php'
                 ?>
 
-        <!--
-<p>Hello <a href="profile.php?user=<?php #echo$_GET['name'] ; ?>"><?php #echo$_GET['name'] ; ?></a>!</p>
-    <u1>
-    	<li><a href="logout.php">Log out</a></li>
-        <li><a href="update.php"> Update details</a></li>
-        <li><a href="changepassword.php">Change password</a></li>
-    
-    </u1>
+                <!-- new function -->
+                <div class="full ">
+                    <div class="col-sm-12 text">
+                        <h3>Current lessons</h3>
+                        <div id="search_results"></div>
+                        <!--
+                            <?php
+                            $db = DB::getInstance();
+                            $data = $db->getAll('lesson');
+                            while($row = $data->fetch(PDO::FETCH_ASSOC)) {
+                                $id = $row['lesson_id'];
+                                $name = $row['name'];
+                                $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/1.jpg';
 
--->
+                                #echo "</br><a href ='../lessonsplay/lessonPalyPanal.php?id=$id'> $name </a> ";
+                                ?>
 
-<!-- new function -->
+                                <div class="col-lg-3 col-md-4 col-xs-6 text2">
+                                    <a class="thumbnail" href="../lessonsplay/lessonPalyPanal.php?id=<?php echo $id;?>" >
+                                        <img class="img-responsive" src="<?php echo $src_path; ?>" alt="">
+                                        <h4> <?php echo $name;?></h4>
+                                    </a>
 
+                                </div>
+                            <?php
+                            }
+                            ?>
+                            -->
 
-
-                    <div class="full ">
-
-
-                        <div class="col-sm-12 text">
-
-                            <h3>Current lessons</h3>
-
-
-
-<?php
-
-$db = DB::getInstance();
-$data = $db->getAll('lesson');
-
-
-
-while($row = $data->fetch(PDO::FETCH_ASSOC)) {
-    $id = $row['lesson_id'];
-    $name = $row['name'];
-
-    $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/1.jpg';
-
-    #echo "</br><a href ='../lessonsplay/lessonPalyPanal.php?id=$id'> $name </a> ";
-    ?>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 text2">
-        <a class="thumbnail" href="../lessonsplay/lessonPalyPanal.php?id=<?php echo $id;?>" >
-            <img class="img-responsive" src="<?php echo $src_path; ?>" alt="">
-            <h4> <?php echo $name;?></h4>
-        </a>
-
-    </div>
-
-
-
-<?php
-}
-
-/*
-echo '<br>'.'sorting testing';
-
-$data = $db->getAllBySortOrder('lesson','name');
-
-while($row = $data->fetch(PDO::FETCH_ASSOC)) {
-    $id = $row['lesson_id'];
-    $name = $row['name'];
-
-
-
-    echo "</br><a href ='user_lesson_play.php?id=$id'> $name </a> ";
-}
-
-*/
-
-
-
-
-
-?>
-
-                            </div>
-                        </div>
+                        <!-- all lessons load by AJAX to results div -->
+                        <div id="results"></div>
                     </div>
                 </div>
-       </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -139,6 +92,38 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)) {
 <!--<script type="text/javascript" src="../../../public/slick/slick.min.js"></script>
 
 
+
+
+
 <!--<script src="../../../../../UCSCpresent/new/js/scripts.js"></script>-->
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        // this is for enter press , this call on click event
+        $('#search-form').submit(function(e) {
+            var $this = $(this);
+            e.preventDefault(); // Prevents the form from submitting regularly
+            $("#serchbut").click();
+
+        });
+
+        // this is for mouse click event
+        $("#serchbut").click(function(){
+           $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');;
+            var search_keyword = document.getElementById("srch-term").value;
+            $("#results").load("../Search/searchResults.php",{'srch-term':search_keyword});
+
+        });
+
+        //load all the lessons to home page when load the page.
+        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#results").load("../../models/fetch_lessons.php");
+
+
+    });
+</script>
+
 </body>
 </html>
