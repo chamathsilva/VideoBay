@@ -8,7 +8,9 @@
 ?>
 <?php
 $user =new User();
-	if($user->isLoggedIn()){
+	if(!($user->isLoggedIn())){
+		redirect::to('../index.php');
+	}
 	?>
 
 <html>
@@ -95,9 +97,3 @@ $user =new User();
 <script src="../../../public/js/ucscvideobay.js"></script>
 </body>
 </html>
-<?php
-	}else{
-		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
-		}
-	
-?>
