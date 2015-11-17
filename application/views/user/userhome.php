@@ -105,6 +105,15 @@ $user =new User();
 <script type="text/javascript">
     $(document).ready(function() {
 
+        //load all the lessons to home page when load the page.
+        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#results").load("../../models/fetch_lessons.php");
+
+
+
+
+
+
         // this is for enter press , this call on click event
         $('#search-form').submit(function(e) {
             var $this = $(this);
@@ -121,9 +130,7 @@ $user =new User();
 
         });
 
-        //load all the lessons to home page when load the page.
-        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
-        $("#results").load("../../models/fetch_lessons.php");
+
 
 
     });

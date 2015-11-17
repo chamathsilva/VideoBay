@@ -17,6 +17,8 @@
         <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Favorites</a></li>
         <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Categories</a></li>
     </ul>
+
+
     <ul class="list-unstyled hidden-xs" id="sidebar-footer">
         <li>
             <a href=""><h3>UCSC<br>VideoBay</h3></a>
