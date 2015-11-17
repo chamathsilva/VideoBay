@@ -194,7 +194,7 @@ ul#adminNav .active{
 }
 
 .navbar-inverse {
-    background-color: #3B5999;
+    background-color: #7dcbf2;
     border-color: #7dcbf2;
 }
 
@@ -267,7 +267,7 @@ ul#adminNav .active{
         width: 100%;
         /* Set the fixed height of the footer here */
         height: 80px;
-        background-color:#3B5999;
+        background-color:#7dcbf2;
 }
 
 

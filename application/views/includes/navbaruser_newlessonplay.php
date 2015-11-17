@@ -40,7 +40,6 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="">Edit profile</a></li>
                     <li><a href="../user/settings_new.php">Settings</a></li>
                     <li><a href="../user/logout.php">Sign Out</a></li>
 

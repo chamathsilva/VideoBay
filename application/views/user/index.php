@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../../public/css/form-elements.css">
         <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
+        <link rel="stylesheet" href="../../../public/css/navbaruser.css">
 
          <!-- Color Box -->
         <link rel="stylesheet" href="../../../public/css/colorbox.css" />

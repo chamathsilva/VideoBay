@@ -14,7 +14,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="userhome.php" class="navbar-brand logo">b</a>
+        <a href="userhome.php" class="navbar-brand logo">vb</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
         <form class="navbar-form navbar-left" id = "search-form">
@@ -26,7 +26,7 @@
             </div>
         </form>
 
-	
+
         <ul class="nav navbar-nav">
             <li>
                 <a href="userhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>
@@ -42,7 +42,6 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="">Edit profile</a></li>
                     <li><a href="settings_new.php">Settings</a></li>
                     <li><a href="logout.php">Sign Out</a></li>
 
