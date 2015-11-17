@@ -102,7 +102,11 @@ else{
                 include '../../views/includes/navbaruser_newlessonplay.php'
                 ?>
                 <div class="full ">
-                    <div class="container-fluid">
+                    <div class="col-sm-12 text">
+                        <div id="results"></div>
+                    </div>
+
+                    <div id = "lessonplay" class = "hide" class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="embed-responsive embed-responsive-16by9">
@@ -182,6 +186,35 @@ else{
 <script src="../../../public/js/jquery.colorbox.js"></script>
 <script src="../../../public/js/userhome.js"></script>
 <?php include '../../controllers/synchronize.php';?>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        var panal = $("#lessonplay");
+
+        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        panal.slideDown(function(){panal.removeClass("hide");});
+
+        // this is for enter press , this call on click event
+        $('#search-form').submit(function(e) {
+            var $this = $(this);
+            e.preventDefault(); // Prevents the form from submitting regularly
+            $("#serchbut").click();
+
+        });
+        // this is for mouse click event
+        $("#serchbut").click(function(){
+            $( "#lessonplay" ).empty();
+            $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+            var search_keyword = document.getElementById("srch-term").value;
+            $("#results").load("../Search/searchResults.php",{'srch-term':search_keyword});
+
+        });
+
+
+
+    });
+</script>
 
 
 
