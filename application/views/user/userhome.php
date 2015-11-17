@@ -1,10 +1,11 @@
 <?php
 require_once '../../configs/core/init.php';
 $user =new User();
-	if($user->isLoggedIn()){
-	
-
-
+	if(!$user->isLoggedIn()){
+        echo "hello";
+        redirect::to('../index.php');
+        die;
+    }
 ?>
 <html>
     <head>
@@ -130,9 +131,4 @@ $user =new User();
 
 </body>
 </html>
-<?php
-	}else{
-		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
-		}
-	
-?>
+

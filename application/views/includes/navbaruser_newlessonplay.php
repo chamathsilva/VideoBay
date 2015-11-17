@@ -17,11 +17,11 @@
         <a href="../user/userhome.php" class="navbar-brand logo">vb </a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-        <form class="navbar-form navbar-left">
-            <div class="input-group input-group-sm" style="max-width:360px;">
+        <form class="navbar-form navbar-left" id = "search-form">
+            <div class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
                 <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
                 <div class="input-group-btn">
-                    <button id="serchbut" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="serchbut" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
             </div>
         </form>

@@ -1,12 +1,20 @@
 <?php
 include("../models/config.inc.php");
-
+//this part is Temporary
 $results = mysqli_query($connecDB,"SELECT COUNT(*) FROM lesson");
 $get_total_rows = mysqli_fetch_array($results); //total records
-
 //break total records into pages
 $pages = ceil($get_total_rows[0]/$item_per_page);
 
+?>
+
+<?php
+require_once '../configs/core/init.php';
+$user =new User();
+if($user->isLoggedIn()){
+    redirect::to('user/userhome.php');
+    die;
+}
 ?>
 
 <!DOCTYPE html>
