@@ -14,7 +14,14 @@ if (isset($_GET['id'])){
         $temp = '../../../data/uploaded_lessons/'.$id.'/videos/1.mp4';
         $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/';
 
+        $topics = $db->getTpoicsById($id);
+        echo var_dump($topics);
+        echo var_export($topics);
+        Die();
+
+
         if ($slid_data = $db->getAllBySortOrder($id)){
+            if ($topics = $db->getTpoicsById($id)){}
         }else{
             echo 'slid data not found';
             Die();
@@ -61,8 +68,21 @@ else{
 
                 <!-- side bar -->
                 <?php
-                include '../../views/includes/sidebar.php'
+                #include '../../views/includes/sidebar.php'
                 ?>
+                <ul class="nav">
+                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                </ul>
+
+                <ul class="nav hidden-xs" id="lg-menu">
+
+                    <li><a onclick="setCurTime(30)" >  <i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
+                    <li><a><i class="glyphicon glyphicon-list"></i> Stories</a></li>
+                    <li><a><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
+                    <li><a><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+                </ul>
+
+
             </div>
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
@@ -90,19 +110,12 @@ else{
                                     <div class = "slidNavigator" style="margin-left: -10px;">
                                         <div class="col-sm-10">
                                             <div class="detail-panal" style="width: 122%;height: 53px;margin-bottom: 5px;">
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-6">
                                                     <div class="lesson-topic">
                                                         <?php echo $name; ?>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-sm-1">
-                                                    <button type="submit" class="btn like"><i class="fa fa-thumbs-up"></i> Like | 34 </button>
-                                                </div>
-
-                                                <div class="col-sm-1">
-                                                    <button type="submit" class="btn like"><i class="fa fa-thumbs-down"></i> 2 </button>
-                                                </div>
 
                                                 <div class="col-sm-6">
                                                     <div class="lesson-topic">
@@ -143,8 +156,6 @@ else{
                                 </div>
                             </div>
                         </div>  <!--container end-->
-
-
                     </div>
                 </div>
             </div>
@@ -157,8 +168,8 @@ else{
 <!--script src="../../../public/js/ucscvideobay.js"></script-->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="../../../public/js/jquery.colorbox.js"></script>
+<script src="../../../public/js/userhome.js"></script>
 <?php include '../../controllers/synchronize.php';?>
-
 
 
 
