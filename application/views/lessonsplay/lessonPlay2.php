@@ -199,12 +199,13 @@ else{
 
         var panal = $("#lessonplay");
 
+
         $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
         panal.slideDown(function(){panal.removeClass("hide");});
 
         //load  lessons to the watch next.
         $("#watch_next").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
-        $("#watch_next").load("../../models/fetch_lessons_withlimit.php");
+        $("#watch_next").load("../../models/fetch_lessons_withlimit.php",{"id":<?php echo $id; ?>});
 
 
 
