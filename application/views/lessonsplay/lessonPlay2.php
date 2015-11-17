@@ -162,9 +162,9 @@ else{
                                                                 $end_time = $row['end_time']; ?>
 
 
-                                                                <li style="float: left;padding-right: 10px">
+                                                                <li style="float: left;padding-right: 10px;">
                                                                     <article data-start="<?php echo $start_time; ?>" data-end="<?php echo $end_time; ?>">
-                                                                        <a href="<?php echo $index ?>"><img  src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
+                                                                        <a href="<?php echo $index ?>"><img style="box-shadow: 3px 3px 5px gray;"  src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
                                                                     </article>
                                                                 </li>
                                                                 <?php
