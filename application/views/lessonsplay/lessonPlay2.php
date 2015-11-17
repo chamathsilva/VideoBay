@@ -14,14 +14,20 @@ if (isset($_GET['id'])){
         $temp = '../../../data/uploaded_lessons/'.$id.'/videos/1.mp4';
         $src_path = '../../../data/uploaded_lessons/'.$id.'/slides/';
 
-        $topics = $db->getTpoicsById($id);
-        echo var_dump($topics);
-        echo var_export($topics);
-        Die();
+        //$slid_data->fetch(PDO::FETCH_ASSOC);
+        //$topics = $db->getTpoicsById($id);
+        //echo var_dump($topics);
+
+
+
 
 
         if ($slid_data = $db->getAllBySortOrder($id)){
-            if ($topics = $db->getTpoicsById($id)){}
+            if ($topics = $db->getTpoicsById($id)){
+            }else{
+                echo 'Query error Title';
+                Die();
+            }
         }else{
             echo 'slid data not found';
             Die();
@@ -76,10 +82,16 @@ else{
 
                 <ul class="nav hidden-xs" id="lg-menu">
 
-                    <li><a onclick="setCurTime(30)" >  <i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
-                    <li><a><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-                    <li><a><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
-                    <li><a><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+                    <?php
+                    while ($row = $topics->fetch(PDO::FETCH_ASSOC)) {
+                        $start_time = $row['start_time'];
+                        $topic = $row['sub_title'];
+                        ?>
+                        <li><a onclick="setCurTime(<?php echo $start_time; ?>)"> <?php echo $topic; ?> </a></li>
+
+                        <?php
+                        }
+                    ?>
                 </ul>
 
 
