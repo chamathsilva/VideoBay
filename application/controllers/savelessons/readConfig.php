@@ -46,7 +46,8 @@ class ConfigReader{
 						$subt=DB::getInstance()->insert('subtitles',array(
 							'lesson_id'=>$id,
 							'slide_id'=>$currentLine[0],
-							'sub_title'=>$currentLine[3]
+							'sub_title'=>$currentLine[3],
+							'start_time'=>$currentLine[1]
 						));
 					}
     				#echo " config data added successfully";
