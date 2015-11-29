@@ -14,20 +14,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="userhome.php" class="navbar-brand logo">b</a>
+        <a href="userhome.php" class="navbar-brand logo">vb</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-	
-        <div class ="navbar-form navbar-left id="search">
-	
-            <form class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
+
+        <form class="navbar-form navbar-left" id = "search-form">
+            <div class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
                 <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
                 <div class="input-group-btn">
                     <button id="serchbut" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
-            </form>
-        </div>
-	
+            </div>
+        </form>
+
+
         <ul class="nav navbar-nav">
             <li>
                 <a href="userhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>
@@ -43,7 +43,6 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="">Edit profile</a></li>
                     <li><a href="settings_new.php">Settings</a></li>
                     <li><a href="logout.php">Sign Out</a></li>
 
@@ -53,3 +52,4 @@
     </nav>
 </div>
 <!-- /top nav -->
+<!---------->

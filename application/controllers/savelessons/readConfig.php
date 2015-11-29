@@ -46,7 +46,8 @@ class ConfigReader{
 						$subt=DB::getInstance()->insert('subtitles',array(
 							'lesson_id'=>$id,
 							'slide_id'=>$currentLine[0],
-							'sub_title'=>$currentLine[3]
+							'sub_title'=>$currentLine[3],
+							'start_time'=>$currentLine[1]
 						));
 					}
     				#echo " config data added successfully";
@@ -109,9 +110,6 @@ session::delete('lesson_id');
 						<div class="row">
 							<div class="col-xs-6 ">
 								<button id = "" onclick='this.form.action = "../../views/user/adminhome.php"' class="btn full ">Done</button>
-							</div>
-							<div class="col-xs-6 ">
-								<button id = "" onclick='this.form.action = "../../views/lessonsplay/lessonPalyPanalAdmin.php?id=<?php echo $id;?>"' class="btn full ">Preview Lesson</button>
 							</div>
 						</div>
 

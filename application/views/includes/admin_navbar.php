@@ -90,13 +90,13 @@
             <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> AdminName <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="settings.php"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
                 </li>
                 <li>
-                    <a href="adminsettings.php"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -127,6 +127,14 @@
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-edit"></i>Remove Users</a>
+            </li>
+
+            <li>
+                <a href="../adminPanal/manageLessons.php"><i class="fa fa-fw fa-edit"></i>Manage lessons</a>
+            </li>
+
+            <li>
+                <a href="../adminPanal/Deletelessons.php"><i class="fa fa-fw fa-edit"></i>Delete lessons</a>
             </li>
         </ul>
 

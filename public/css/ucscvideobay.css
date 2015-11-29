@@ -195,7 +195,11 @@ ul#adminNav .active{
 
 .navbar-inverse {
     background-color: #7dcbf2;
-    border-color: #1E51FF;
+    border-color: #7dcbf2;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -625,3 +629,14 @@ ul.alert-dropdown {
 .form-group {
     margin-bottom: 10px;
 }
+
+/*-----
+
+.main-list {
+    padding-left: .5em;
+}
+
+.main-list .media {
+    padding-bottom: 1.1em;
+    border-bottom: 1px solid #e8e8e8;
+}*/

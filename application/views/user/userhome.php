@@ -1,12 +1,19 @@
 <?php
 require_once '../../configs/core/init.php';
 $user =new User();
+<<<<<<< HEAD
 	if(!($user->isLoggedIn())){
 		redirect::to('../index.php');
 	}
 	
 
 
+=======
+	if(!$user->isLoggedIn()){
+        redirect::to('../index.php');
+        die;
+    }
+>>>>>>> c20e0631a48f081575bc3c50a04e25938254e8a8
 ?>
 <html>
     <head>
@@ -53,9 +60,19 @@ $user =new User();
 
                 <!-- new function -->
                 <div class="full ">
+
+                    <div class="col-sm-12 text">
+                        <h3>Recent view</h3>
+                        <div id="recentLesson"></div>
+                    </div>
+
+
+
+
+                    <!--current lessons -->
                     <div class="col-sm-12 text">
                         <h3>Current lessons</h3>
-                        <div id="search_results"></div>
+                        <!--div id="search_results"></div-->
                         <!--
                             <?php
                             $db = DB::getInstance();
@@ -83,6 +100,10 @@ $user =new User();
                         <!-- all lessons load by AJAX to results div -->
                         <div id="results"></div>
                     </div>
+
+                    <!--end of currrent lessons-->
+
+
                 </div>
             </div>
         </div>
@@ -106,6 +127,19 @@ $user =new User();
 <script type="text/javascript">
     $(document).ready(function() {
 
+        //load all the results to home page when load the page.
+        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#results").load("../../models/fetch_lessons.php");
+
+
+        //load recent lesson to home page when load the page.
+        $("#recentLesson").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#recentLesson").load("../../models/fetch_last_lesson.php");
+
+
+
+
+
         // this is for enter press , this call on click event
         $('#search-form').submit(function(e) {
             var $this = $(this);
@@ -116,18 +150,23 @@ $user =new User();
 
         // this is for mouse click event
         $("#serchbut").click(function(){
-           $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');;
+           $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
             var search_keyword = document.getElementById("srch-term").value;
             $("#results").load("../Search/searchResults.php",{'srch-term':search_keyword});
 
         });
 
-        //load all the lessons to home page when load the page.
-        $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
-        $("#results").load("../../models/fetch_lessons.php");
+
 
 
     });
+</script>
+
+
+<script>
+    function myFunction(id) {
+        alert("I am an alert box!".concat(id));
+    }
 </script>
 
 </body>

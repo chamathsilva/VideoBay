@@ -2,5 +2,5 @@
 [SQL]
 host = localhost
 user = root
-password = root
+password = 'root'
 dbname = database_user

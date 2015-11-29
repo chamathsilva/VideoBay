@@ -99,6 +99,11 @@ class DB{
 		return $stmt;
 	}
 
+	public function getTpoicsById($lessonId){
+		$stmt = $this->_pdo->query('SELECT * FROM subtitles WHERE lesson_id ='.$lessonId.' ORDER BY slide_id');
+		return $stmt;
+	}
+
 
     //end of new function
 

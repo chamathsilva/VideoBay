@@ -14,10 +14,11 @@
 
     <ul class="nav hidden-xs" id="lg-menu">
         <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
-        <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+        <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Favorites</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Categories</a></li>
     </ul>
+
+
     <ul class="list-unstyled hidden-xs" id="sidebar-footer">
         <li>
             <a href=""><h3>UCSC<br>VideoBay</h3></a>

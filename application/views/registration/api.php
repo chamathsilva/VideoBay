@@ -40,7 +40,10 @@
    </div>
 </div>
 
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!--<script src="../../../library/Jquery/jquery.js"></script>-->
+<script src="../../../public/js/ucscvideobay.js"></script>
 </body>
 </html>
 
