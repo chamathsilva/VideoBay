@@ -1,0 +1,35 @@
+Time : 10:31:58
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Raw SQL : SELECT * FROM `watchlater` WHERE `user_id` =
+
+Time : 10:31:28
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Raw SQL : SELECT * FROM `watchlater` WHERE `user_id` =
+
+Time : 10:12:19
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO watchlater (user_id,lesson_id,timestamp,lessonname) VALUES(:uid,:lid,:timess,:namee) ON DUPLICATE KEY UPDATE timestamp = :timess
+
+Time : 10:10:29
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13-98' for key 'PRIMARY'
+Raw SQL : INSERT INTO watchlater (user_id,lesson_id,timestamp,lessonname) VALUES(:uid,:lid,:timess,:namee)
+
+Time : 10:09:10
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO watchlater (user_id,lesson_id,timestamp,lessonname) VALUES(:uid,:lid,:timess,:namee) ON DUPLICATE KEY UPDATE timestamp = :timess
+
+Time : 09:51:20
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF EXISTS (SELECT * FROM watchlater WHERE lesson_id = ? )
+    UPDATE watchlater ' at line 1
+Raw SQL : IF EXISTS (SELECT * FROM watchlater WHERE lesson_id = :lid )
+    UPDATE watchlater SET timestamp = :timee  WHERE lesson_id= :lid
+ELSE
+    INSERT INTO watchlater(user_id,lesson_id,timestamp,lessonname) VALUES(:uid,:lid,:timess,:namee)
+
+Time : 09:50:12
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF EXISTS (SELECT * FROM watchlater WHERE lesson_id = ? )
+    UPDATE watchlater ' at line 1
+Raw SQL : IF EXISTS (SELECT * FROM watchlater WHERE lesson_id = :lid )
+    UPDATE watchlater SET timestamp = :timee  WHERE lesson_id= :lid
+ELSE
+    INSERT INTO watchlater(user_id,lesson_id,timestamp,lessonname) VALUES(:uid,:lid,:timess,:namee)

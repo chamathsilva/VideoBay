@@ -1,19 +1,10 @@
 <?php
 require_once '../../configs/core/init.php';
 $user =new User();
-<<<<<<< HEAD
+
 	if(!($user->isLoggedIn())){
 		redirect::to('../index.php');
 	}
-	
-
-
-=======
-	if(!$user->isLoggedIn()){
-        redirect::to('../index.php');
-        die;
-    }
->>>>>>> c20e0631a48f081575bc3c50a04e25938254e8a8
 ?>
 <html>
     <head>
@@ -63,7 +54,6 @@ $user =new User();
 
                     <div class="col-sm-12 text">
                         <h3>Recent view</h3>
-                        <?php echo($_SESSION["user"]) ?>
                         <div id="recentLesson"></div>
                     </div>
 
@@ -157,6 +147,13 @@ $user =new User();
 
         });
 
+        //load  watch later to the watch_later.
+        $("#watch_later").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+        $("#watch_later").load("../../models/fetch_watch_later.php");
+
+
+
+
 
 
 
@@ -166,8 +163,10 @@ $user =new User();
 
 <script>
     function myFunction(id) {
-        alert("I am an alert box!".concat(id));
+        //alert("I am an alert box!".concat(<?php echo $_SESSION["user"] ?>));
+
     }
+
 </script>
 
 </body>

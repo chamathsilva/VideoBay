@@ -83,5 +83,9 @@ function setCurTime(n) {
     vid.currentTime=n;
 }
 
+function getCurTime() {
+  return vid.currentTime;
+}
+
 
 </script>

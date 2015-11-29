@@ -4,7 +4,7 @@ require_once '../../configs/core/init.php';
 if (isset($_GET['id'])){
     $id = $_GET['id'];
     $db = DB::getInstance();
-    $initialstart = 80;
+    $initialstart = $_GET['time'];
 
     //store the last lesson id with the user id
     $user_id =  $_SESSION["user"];
@@ -23,7 +23,7 @@ if (isset($_GET['id'])){
         //$topics = $db->getTpoicsById($id);
         //echo var_dump($topics);
 
-        
+
 
         if ($slid_data = $db->getAllBySortOrder($id)){
             if ($topics = $db->getTpoicsById($id)){
@@ -96,7 +96,7 @@ else{
                         </li>
 
                         <?php
-                        }
+                    }
                     ?>
                 </ul>
 
@@ -143,15 +143,21 @@ else{
                                     <div class = "slidNavigator" style="margin-left: -10px;">
                                         <div class="col-sm-10">
                                             <div class="detail-panal" style="width: 122%;height: 53px;margin-bottom: 5px;">
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-2">
                                                     <div class="lesson-topic">
                                                         <?php echo $name; ?>
                                                     </div>
                                                 </div>
 
 
-
                                                 <div class="col-sm-2 text-right">
+                                                    <?php
+                                                    $deleteButton = '<button  onclick="setCurTime('.$initialstart.');" class="btn">From view</button>';
+                                                    echo $deleteButton;
+                                                    ?>
+                                                </div>
+
+                                                <div class="col-sm-2 text-left">
                                                     <?php
                                                     $deleteButton = '<button  onclick="addWatchlater();" class="btn">Watch later</button>';
                                                     echo $deleteButton;
@@ -172,33 +178,33 @@ else{
 
                                             </div>
                                         </div>
-                                            <div class="col-sm-10">
-                                                <div class="detail-panal" style="border:0px solid black;width:122%;height:164px;overflow-y:hidden;overflow-x:scroll;">
+                                        <div class="col-sm-10">
+                                            <div class="detail-panal" style="border:0px solid black;width:122%;height:164px;overflow-y:hidden;overflow-x:scroll;">
 
-                                                    <nav id="menu" style="width:100000%;">
-                                                        <ul style="list-style: none;">
+                                                <nav id="menu" style="width:100000%;">
+                                                    <ul style="list-style: none;">
+                                                        <?php
+                                                        $index = 1;
+                                                        while ($index <= $no_of_slid){
+                                                            $row = $slid_data->fetch(PDO::FETCH_ASSOC);
+                                                            $start_time = $row['start_time'];
+                                                            $end_time = $row['end_time']; ?>
+
+
+                                                            <li style="float: left;padding-right: 10px;">
+                                                                <article data-start="<?php echo $start_time; ?>" data-end="<?php echo $end_time; ?>">
+                                                                    <a href="<?php echo $index ?>"><img style="box-shadow: 3px 3px 5px gray;"  src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
+                                                                </article>
+                                                            </li>
                                                             <?php
-                                                            $index = 1;
-                                                            while ($index <= $no_of_slid){
-                                                                $row = $slid_data->fetch(PDO::FETCH_ASSOC);
-                                                                $start_time = $row['start_time'];
-                                                                $end_time = $row['end_time']; ?>
-
-
-                                                                <li style="float: left;padding-right: 10px;">
-                                                                    <article data-start="<?php echo $start_time; ?>" data-end="<?php echo $end_time; ?>">
-                                                                        <a href="<?php echo $index ?>"><img style="box-shadow: 3px 3px 5px gray;"  src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
-                                                                    </article>
-                                                                </li>
-                                                                <?php
-                                                                $index += 1;
-                                                            }
-                                                            ?>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
+                                                            $index += 1;
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </nav>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>  <!--container end-->
@@ -267,7 +273,7 @@ else{
     function myFunction() {
         setCurTime(60);
         alert("Hello! I am an alert box!!".concat(getCurTime()));
-        }
+    }
     function addWatchlater() {
         window.location.href = "../../models/addwatchLater.php?id=".concat(<?php echo $id;?>,"&time=",getCurTime());
     }
