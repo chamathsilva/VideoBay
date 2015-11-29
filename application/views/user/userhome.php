@@ -54,6 +54,7 @@ $user =new User();
 
                     <div class="col-sm-12 text">
                         <h3>Recent view</h3>
+                        <?php echo($_SESSION["user"]) ?>
                         <div id="recentLesson"></div>
                     </div>
 
