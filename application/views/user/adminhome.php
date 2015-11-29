@@ -2,7 +2,9 @@
 require_once '../../configs/core/init.php';
 echo '<p>You are an administrator!</p> ';
 $user =new User();
-	if($user->isLoggedIn()){
+	if(!($user->isLoggedIn())){
+		redirect::to('../index.php');
+	}
 	?>
 ?>
 <p>Hello <a href="profile.php?user=<?php echo$_GET['name'] ; ?>"><?php echo$_GET['name'] ; ?></a>!</p>
@@ -81,12 +83,7 @@ $user =new User();
 <script src="../../../public/js/ucscvideobay.js"></script>
 </body>
 </html>
-<?php
-	}else{
-		echo "ILLEGAL ENTRYYYYY !!!!!!!!!!!!!!!!!!!!!!";
-		}
-	
-?>
+
 
 
 

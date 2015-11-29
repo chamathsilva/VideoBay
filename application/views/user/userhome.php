@@ -1,10 +1,19 @@
 <?php
 require_once '../../configs/core/init.php';
 $user =new User();
+<<<<<<< HEAD
+	if(!($user->isLoggedIn())){
+		redirect::to('../index.php');
+	}
+	
+
+
+=======
 	if(!$user->isLoggedIn()){
         redirect::to('../index.php');
         die;
     }
+>>>>>>> c20e0631a48f081575bc3c50a04e25938254e8a8
 ?>
 <html>
     <head>
