@@ -4,6 +4,7 @@ require_once '../../configs/core/init.php';
 if (isset($_GET['id'])){
     $id = $_GET['id'];
     $db = DB::getInstance();
+    $initialstart = 80;
 
 
     $data = $db->getLessonbyid($id);
@@ -133,11 +134,30 @@ else{
                                     <div class = "slidNavigator" style="margin-left: -10px;">
                                         <div class="col-sm-10">
                                             <div class="detail-panal" style="width: 122%;height: 53px;margin-bottom: 5px;">
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-2">
                                                     <div class="lesson-topic">
                                                         <?php echo $name; ?>
                                                     </div>
                                                 </div>
+
+
+                                                <div class="col-sm-2 text-right">
+                                                        <?php
+                                                        $deleteButton = '<button  onclick="setCurTime('.$initialstart.');" class="btn">From view</button>';
+                                                        echo $deleteButton;
+                                                      ?>
+                                                </div>
+
+                                                <div class="col-sm-2 text-left">
+                                                    <?php
+                                                    $deleteButton = '<button  onclick="setCurTime('.$initialstart.');" class="btn">Watch later</button>';
+                                                    echo $deleteButton;
+                                                    ?>
+                                                </div>
+
+
+
+
 
 
                                                 <div class="col-sm-6">
@@ -197,11 +217,17 @@ else{
 <script type="text/javascript">
     $(document).ready(function() {
 
+
+
         var panal = $("#lessonplay");
 
 
         $("#results").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
+
+
         panal.slideDown(function(){panal.removeClass("hide");});
+        //jump to the video to specifc time.used for watch later function.
+        $("#results").hide();
 
         //load  lessons to the watch next.
         $("#watch_next").prepend('<div class="loading-indication"><img src="../ajax-loader.gif" /> Loading...</div>');
@@ -229,6 +255,13 @@ else{
 
     });
 </script>
+
+<script>
+    function myFunction() {
+        setCurTime(60);
+        }
+</script>
+
 
 
 

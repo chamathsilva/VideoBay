@@ -128,6 +128,14 @@
             <li>
                 <a href="#"><i class="fa fa-fw fa-edit"></i>Remove Users</a>
             </li>
+
+            <li>
+                <a href="../adminPanal/manageLessons.php"><i class="fa fa-fw fa-edit"></i>Manage lessons</a>
+            </li>
+
+            <li>
+                <a href="../adminPanal/Deletelessons.php"><i class="fa fa-fw fa-edit"></i>Delete lessons</a>
+            </li>
         </ul>
 
 

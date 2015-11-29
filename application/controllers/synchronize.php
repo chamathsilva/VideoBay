@@ -76,9 +76,12 @@ $('#menu ul li a').click(function(){
 /*when slid is clickin call this function with the start time of that slid.
   this function jump the vide to that time.*/
 var vid = document.getElementById("myVideo");
+vid.autoplay = true;
+
 
 function setCurTime(n) {
     vid.currentTime=n;
 }
+
 
 </script>
