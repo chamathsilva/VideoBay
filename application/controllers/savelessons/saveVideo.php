@@ -6,7 +6,6 @@ include "../Session.php";
 class VideoHandler extends FileHandler{
 	
 	public $valid_files=array("MP4","mp4");
- 	public $max_size=100000000;
 	public $column="video_path";
 }
 
