@@ -1,3 +1,11 @@
+Time : 10:52:45
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Raw SQL : SELECT * FROM `watchlater` WHERE `user_id` =
+
+Time : 10:52:44
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Raw SQL : SELECT * FROM `watchlater` WHERE `user_id` =
+
 Time : 10:31:58
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 Raw SQL : SELECT * FROM `watchlater` WHERE `user_id` =
