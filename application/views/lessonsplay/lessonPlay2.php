@@ -55,11 +55,22 @@ else{
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+
+
     <link rel="stylesheet" href="../../../public/css/form-elements.css">
     <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
     <link rel="stylesheet" href="../../../public/css/navbaruser.css">
+
+    <!--slider-->
+    <link rel="stylesheet" href="slider/sly.css">
 
 
 
@@ -84,7 +95,7 @@ else{
                 </ul>
 
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li style="padding-left: 40px;"><u>Main Topics</u></li>
+                    <li style="padding-left: 40px;">Main Topics</li>
 
                     <?php
                     while ($row = $topics->fetch(PDO::FETCH_ASSOC)) {
@@ -123,7 +134,9 @@ else{
                         <div id="results"></div>
                     </div>
 
-                    <div id = "lessonplay" class = "hide" class="container-fluid">
+
+                    <!--hide karala tibba eka ain kara -->
+                    <div id = "lessonplay" class = "hideee" class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="embed-responsive embed-responsive-16by9">
@@ -134,12 +147,12 @@ else{
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.jpg';?>" alt="Wrong link" min-width="100%" height="auto" >
+                                <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.JPG';?>" alt="Wrong link" min-width="100%" height="auto" >
                             </div>
 
 
                             <div class=" col-sm-12">
-                                <div class="jumbotron-fluid" >
+
                                     <div class = "slidNavigator" style="margin-left: -10px;">
                                         <div class="col-sm-10">
                                             <div class="detail-panal" style="width: 122%;height: 53px;margin-bottom: 5px;">
@@ -150,17 +163,12 @@ else{
                                                 </div>
 
 
-
                                                 <div class="col-sm-2 text-right">
                                                     <?php
                                                     $deleteButton = '<button  onclick="addWatchlater();" class="btn">Watch later</button>';
                                                     echo $deleteButton;
                                                     ?>
                                                 </div>
-
-
-
-
 
 
                                                 <div class="col-sm-6">
@@ -172,22 +180,25 @@ else{
 
                                             </div>
                                         </div>
-                                            <div class="col-sm-10">
-                                                <div class="detail-panal" style="border:0px solid black;width:122%;height:164px;overflow-y:hidden;overflow-x:scroll;">
+                                    </div>
 
-                                                    <nav id="menu" style="width:100000%;">
-                                                        <ul style="list-style: none;">
+
+
+                                            <div> class="col-sm-12">
+                                                <!--div class="detail-panal" style="border:0px solid black;width:122%;height:300px;overflow-y:hidden;overflow-x:scroll;"-->
+                                                <div class="wrap">
+
+                                                    <div class="frame" id="centered">
+                                                        <ul class="slidee">
                                                             <?php
                                                             $index = 1;
                                                             while ($index <= $no_of_slid){
                                                                 $row = $slid_data->fetch(PDO::FETCH_ASSOC);
                                                                 $start_time = $row['start_time'];
                                                                 $end_time = $row['end_time']; ?>
-
-
-                                                                <li style="float: left;padding-right: 10px;">
+                                                                <li>
                                                                     <article data-start="<?php echo $start_time; ?>" data-end="<?php echo $end_time; ?>">
-                                                                        <a href="<?php echo $index ?>"><img style="box-shadow: 3px 3px 5px gray;"  src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
+                                                                        <a hreff="<?php echo $index ?>"><img src=" <?php echo $src_path.$index.'.jpg' ?> " height="140"  onclick="setCurTime(<?php echo $start_time ?>)"></a>
                                                                     </article>
                                                                 </li>
                                                                 <?php
@@ -195,27 +206,111 @@ else{
                                                             }
                                                             ?>
                                                         </ul>
-                                                    </nav>
+                                                    </div>
+
+
+                                                    <!-- Controls & Scroll Bar-->
+                                                    <div class="controls center">
+                                                        <button class="btn prevPage"> <-- page</button>
+                                                        <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
+                                                        <button class="btn next">next <i class="icon-chevron-right"></i></button>
+                                                        <button class="btn nextPage">page --> </button>
+                                                    </div>
+
+                                                    <div class="scrollbar">
+                                                        <div class="handle"></div>
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                                <div class="info text-center ">
+                                                    <!--disply current slid num -->
+                                                    <div id = current >  </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                 </div>
-                            </div>
+
+
+                            </div> <!--Full end -->
+
+
                         </div>  <!--container end-->
-                    </div>
+
+
+                </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
+<!--
+<h2 id ="2" > Tessssss</h2>
+<div id = "testtt">Thth</div>  -->
+
+
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!--script src="../../../public/js/ucscvideobay.js"></script-->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="../../../public/js/jquery.colorbox.js"></script>
-<script src="../../../public/js/userhome.js"></script>
+
 <?php include '../../controllers/synchronize.php';?>
+
+<!--Slider -->
+<script src="slider/plugin.js"></script>
+<script src="slider/sly.js"></script>
+<!--
+<script src="slider/slider.js"></script>
+-->
+
+
+<script type="text/javascript">
+    var $wrap  = $('.wrap');
+    var sly = new Sly( '#centered', {
+        horizontal: 1,
+        itemNav: 'centered',
+        smart: 1,
+        activateOn: 'click',
+        mouseDragging: 1,
+        touchDragging: 1,
+        releaseSwing: 1,
+        startAt: 1,
+        scrollBar: $wrap.find('.scrollbar'),
+        scrollBy: 1,
+        speed: 300,
+        elasticBounds: 1,
+        easing: 'easeOutExpo',
+        dragHandle: 1,
+        dynamicHandle: 1,
+        clickBar: 1,
+
+
+        // Buttons
+        prev: $wrap.find('.prev'),
+        next: $wrap.find('.next'),
+        prevPage: $wrap.find('.prevPage'),
+        nextPage: $wrap.find('.nextPage')
+    });
+
+    sly.init();
+
+    function activeslid(id) {
+        sly.activate(id);
+
+    }
+
+
+
+
+</script>
+
+
+
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -271,7 +366,22 @@ else{
     function addWatchlater() {
         window.location.href = "../../models/addwatchLater.php?id=".concat(<?php echo $id;?>,"&time=",getCurTime());
     }
+
+
+    /*
+
+    $('#2').click(function(){
+        alert("The paragraph was clicked.");
+        $("#testtt").text("hello");
+    });
+
+    */
+
+
 </script>
+
+
+
 
 
 

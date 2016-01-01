@@ -11,7 +11,7 @@ if (isset($_GET['id'])){
 
     $time =  $_GET['time'];
     $lessonid = $_GET['id'];
-    $user_id =  $_SESSION["user"];
+
     echo $time;
     echo '<br>';
     echo $lessonid;

@@ -44,7 +44,7 @@ class DB
 	*/
 		private function Connect()
 		{
-			$this->settings = parse_ini_file("../configs/core/settings.ini.php");
+			$this->settings = parse_ini_file("settings.ini.php");
 			$dsn = 'mysql:dbname='.$this->settings["dbname"].';host='.$this->settings["host"].'';
 			try 
 			{
