@@ -24,7 +24,7 @@
         $category = $row['category'];
         $type = $row['type'];
         $deleteButton = '<a class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#myModal'.$id.'" style = "margin-right:10px;"> <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>'.
-            '<a class="btn btn-danger btn-sm" href="'.$id.'"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>'
+            '<a class="btn btn-danger btn-sm" onclick = "deletelesson('.$id.')" > <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>'
             .'<!-- Modal -->
                                 <div class="modal fade" id="myModal'.$id.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel'.$id.'">
                                   <div class="modal-dialog" role="document">

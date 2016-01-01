@@ -55,8 +55,6 @@
     <script>
 
         function viewData(){
-
-
             $.ajax({
                 type: "GET",
                 url: "lessonTable.php"
@@ -68,6 +66,7 @@
 
         function updatedata(id){
 
+            //reload table after the mode closed.
             $('#myModal' + id).on('hidden.bs.modal', function () {
                 viewData()
 
@@ -105,9 +104,40 @@
                 }
             });
 
+        }
 
+
+        function deletelesson(id){
+            var r = confirm("Are you sure !");
+            if (r == true) {
+                var m_data = new FormData();
+                m_data.append('id', id);
+
+                $("#results").html("chamath");
+                //Ajax post data to server
+                $.ajax({
+                    url: '../../models/delete_lessons.php',
+                    data: m_data,
+                    processData: false,
+                    contentType: false,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (response) {
+                        //load json data from server and output message
+                        if (response.type == "text") {
+                            $("#results").html(response.text);
+                        } else {
+                            $("#results").html(response.text);
+
+                        }
+                        viewData();
+                    }
+                });
+            }
 
         }
+
+
 
 
     </script>
