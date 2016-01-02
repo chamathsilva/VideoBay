@@ -14,6 +14,22 @@ function insertUser($datalist=array()){
 	$user=new User();
 			
 			$salt = Hash::salt(32);
+			try{
+				$user->createlesson(array(
+				
+				'Lesson_ID'=>0,
+				'User_Name'=>Input::get('User_Name')
+				
+				
+				
+				));
+				
+				
+				
+			}catch(Exception $e){
+				die($e->getMessage());
+			
+			}
 			
 			try{
 				$user->create(array(

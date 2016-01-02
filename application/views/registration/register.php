@@ -51,6 +51,22 @@ if(Input::exists()){
 			$salt = Hash::salt(32);
 			
 			try{
+				$user->createlesson(array(
+				
+				'Lesson_ID'=>0,
+				
+				
+				
+				));
+				
+				
+				
+			}catch(Exception $e){
+				die($e->getMessage());
+			
+			}
+			
+			try{
 				$user->create(array(
 				'First_Name'=>Input::get('First_Name'),
 				'Last_Name'=>Input::get('Last_Name'),
