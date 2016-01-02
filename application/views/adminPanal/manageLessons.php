@@ -15,13 +15,6 @@ if($user->isLoggedIn()){
 
 
 -->
-<?php
-/**
- * Created by PhpStorm.
- * User: Smalkakulage
- * Date: 9/1/15
- * Time: 11:56 PM
- */ ?>
 
 
 <html>

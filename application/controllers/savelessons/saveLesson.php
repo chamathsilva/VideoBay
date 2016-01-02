@@ -29,11 +29,8 @@ class FileHandler{
 				
 				if ($_FILES['files']['error'][$f] == 0) {
 					            
-	        		if ($_FILES['files']['size'][$f] > $this->max_size) {
-	            		echo "$name ". "file is too large!.";
-	            		continue; // Skip large files
-	        			}
-					else if( ! in_array(pathinfo($name, PATHINFO_EXTENSION),$this->valid_files) ){
+
+					if( ! in_array(pathinfo($name, PATHINFO_EXTENSION),$this->valid_files) ){
 						echo "$name "."is not a  valid format";
 						continue; // Skip invalid file formats
 		

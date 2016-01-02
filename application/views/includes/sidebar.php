@@ -25,11 +25,19 @@
         </li>
     </ul>
 
+
+    <ul class="nav hidden-xs">
+        <div class="row">
+            <li style="margin-bottom: 15px; margin-top:10px; ">Watch later</li>
+            <div id="watch_later"></div>
+
+        </div>
+
+    </ul>
+
     <!-- tiny only nav-->
     <ul class="nav visible-xs" id="xs-menu">
         <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
         <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
         <li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
         <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
-    </ul>
-

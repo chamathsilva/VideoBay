@@ -78,6 +78,11 @@ if(Input::exists()){
 				
 				
 				));
+
+				$user->createlesson(array(
+					'lesson_id'=>0,
+					'user_id'=>99,
+				));
 				
 				Session::flash('home','You have been registered and can now log in!');
 				redirect::to('index.php');

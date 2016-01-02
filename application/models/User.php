@@ -46,11 +46,17 @@ class User{
 			throw new Exception('There was a problem creating an account');
 			}
 		}
+
    public function createlesson($fields =array()){
 		if(!$this->_db->insert('recentlesson',$fields)){
 			throw new Exception('There was a problem ');
 			}
 		}	
+
+
+
+	
+
 	public function find($user = null){
 		if($user){
 			$field = (is_numeric($user))? 'User_ID' : 'User_Name';

@@ -3,6 +3,8 @@ require("Db.class.php");
 $db = new Db();
 $lessons = $db->query("SELECT * FROM lesson");
 
+
+//remove the on click event no need this
 foreach ($lessons as $row) {
     $id = $row['lesson_id'];
     $name = $row['name'];

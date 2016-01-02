@@ -3,7 +3,6 @@ require("Db.class.php");
 $db = new Db();
 $lessons = $db->query("SELECT * FROM lesson");
 
-
 $json=json_encode($lessons);
 
 echo $json;

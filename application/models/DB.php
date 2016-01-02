@@ -104,6 +104,11 @@ class DB{
 		return $stmt;
 	}
 
+	public function insertrecentlesson($lessonId,$userId){
+		$stmt = $this->_pdo->query('UPDATE recentlesson SET lesson_id = '.$lessonId.' WHERE user_id = '.$userId);
+		return $stmt;
+	}
+
 
     //end of new function
 

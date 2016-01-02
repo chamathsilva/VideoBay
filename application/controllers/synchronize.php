@@ -50,10 +50,32 @@ $('video').bind('timeupdate',function(event){
   defined timestamps and show the appropriate section.
   Hide all others.
 */
+
+      var perivous = -1;
+
 function showsection(t){
   for(i=0;i<all;i++){
     if(t >= timestamps[i].start && t <= timestamps[i].end){
-      document.getElementById("xx").src = "<?php echo $src_path; ?>"+(i+1)+"."+"jpg";
+
+      /*delay ekak awoth if eka ain karanna*/
+
+      if(i != perivous){
+        /* meken slid eka display karanawa */
+        document.getElementById("xx").src = "<?php echo $src_path; ?>"+(i+1)+"."+"jpg";
+        /* Menna methanta current slid id ekath display venna hadanna*/
+        $("#current").text(i+1 + ' of ' + all);
+
+        /*methanin slider eka active karanawa */
+        activeslid(i);
+      }
+      perivous = i;
+
+
+      /*
+      $( "#" + (i+1) ).click();
+      */
+
+
     } else {
           /*set blank slid*/
         }
@@ -63,15 +85,7 @@ function showsection(t){
 )
 
 
-$(document).ready(function(){
 
-$('#menu ul li a').click(function(){
-  document.getElementById("xx").src = "<?php echo $src_path; ?>"+$(this).attr('href')+"."+"jpg";
-  return false;
-
-});
-
-});
             
 /*when slid is clickin call this function with the start time of that slid.
   this function jump the vide to that time.*/
@@ -81,6 +95,11 @@ vid.autoplay = true;
 
 function setCurTime(n) {
     vid.currentTime=n;
+
+}
+
+function getCurTime() {
+  return vid.currentTime;
 }
 
 
