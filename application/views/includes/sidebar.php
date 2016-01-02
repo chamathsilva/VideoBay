@@ -14,8 +14,8 @@
 
     <ul class="nav hidden-xs" id="lg-menu">
         <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
-        <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Favorites</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Categories</a></li>
+        <li><a onclick="loadWatchLater()"><i class="glyphicon glyphicon-list"></i> Watch Later</a></li>
+        <li><a ><i class="glyphicon glyphicon-paperclip"></i> Categories</a></li>
     </ul>
 
 
@@ -25,7 +25,7 @@
         </li>
     </ul>
 
-
+    <!--
     <ul class="nav hidden-xs">
         <div class="row">
             <li style="margin-bottom: 15px; margin-top:10px; ">Watch later</li>
@@ -34,6 +34,7 @@
         </div>
 
     </ul>
+    -->
 
     <!-- tiny only nav-->
     <ul class="nav visible-xs" id="xs-menu">

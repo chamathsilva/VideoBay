@@ -55,30 +55,10 @@ UCSS VideoBay is a web based system which creates a learning environment for the
                         <div class="col-sm-5 form-box2">
                             <?php include 'includes/loginform.php' ?>
                         </div>
-                        </div>
                     </div>
-
-                    <!--end of the basic page -->
-                  
-
-                </div>
+                </div> <!--end of the basic page -->
             </div>
-<!--
-  <div class="container-fluid">
-      <div class="container-scroll">
-          <div class="Middle">
-              <div class="container">
-                  <div class="col-lg-12 text2">
-                    <h1 >Lesson Gallery</h1>
-                  </div>
-                  <div id="results"></div>
-                  <div class="pagination"></div>
-              </div>
-          </div>
-      </div>
-  </div>
-  -->
-
+        </div>
 
         <div class="container">
             <div class="row row-centered">

@@ -6,11 +6,9 @@ session_start();
 if (isset($_GET['id'])){
 
     $db = new Db();
-
-
-
     $time =  $_GET['time'];
     $lessonid = $_GET['id'];
+    $user_id = $_SESSION["user"];
 
     echo $time;
     echo '<br>';

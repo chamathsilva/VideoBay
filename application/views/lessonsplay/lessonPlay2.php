@@ -150,6 +150,8 @@ else{
                                 <img id="xx" class="img-responsive" src="<?php echo $src_path.'1.JPG';?>" alt="Wrong link" min-width="100%" height="auto" >
                             </div>
 
+                            <h1><?php echo $id;?></h1>
+
 
                             <div class=" col-sm-12">
 
@@ -279,7 +281,7 @@ else{
         mouseDragging: 1,
         touchDragging: 1,
         releaseSwing: 1,
-        startAt: 1,
+        startAt: 0,
         scrollBar: $wrap.find('.scrollbar'),
         scrollBy: 1,
         speed: 300,
