@@ -22,56 +22,9 @@
     <!-- Top Menu Items -->
     <ul class="admin nav navbar-right top-nav">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu message-dropdown">
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>name</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i>time</p>
-                                <p>massage</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>name</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i>time</p>
-                                <p>masage 2</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>name</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> time</p>
-                                <p>massage 3</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-footer">
-                    <a href="#">Read All New Messages</a>
-                </li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope"></i> <b class="caret"></b></a>
+            <ul class="dropdown-menu message-dropdown" id="feedback_dropdown">
+
             </ul>
         </li>
         <li class="dropdown">

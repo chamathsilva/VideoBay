@@ -67,6 +67,7 @@ $user =new User();
                 </div>
                 <!-- main right col -->
                 <div class="column col-sm-10 col-xs-11" id="main">
+
                     <?php
                         include '../../views/includes/navbaruser_new.php'
                     ?>
@@ -96,6 +97,10 @@ $user =new User();
                         <!--end of currrent lessons-->
 
 
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -110,6 +115,10 @@ $user =new User();
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="../../../public/js/ucscvideobay.js"></script>
 <script src="../../../public/js/userhome.js"></script>
+
+
+<script src="../../../public/js/validation_core.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <!--<script type="text/javascript" src="../../../public/slick/slick.min.js"></script>
 
 
@@ -166,6 +175,14 @@ $user =new User();
 
 
 <script>
+
+    function send_request(){
+        $( "#send_request" ).click();
+        //confirm("Are you sure !");
+        //$("#comment").html("Watch Later")
+
+
+    }
 
     function loadWatchLater(){
         var recent = $("#recentLesson");
@@ -260,6 +277,69 @@ $user =new User();
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+
+        $("#send_request").click(function() {
+
+            $("#request_form").validate({
+            rules:{
+                topic:{
+                    required: true
+
+                },
+                comment: {
+                    required: true
+                }
+
+            },
+
+
+
+            //if form is valid do this
+            submitHandler: function(form) {
+
+
+
+                //get input field values data to be sent to server
+                var m_data = new FormData();
+                m_data.append( 'topic',  document.getElementById("topic" ).value);
+                m_data.append( 'comment', document.getElementById("comment").value);
+
+                document.getElementById("request_form").reset();
+
+                //Ajax post data to server
+                $.ajax({
+                    url: '../../models/send_request.php',
+                    data: m_data,
+                    processData: false,
+                    contentType: false,
+                    type: 'POST',
+                    dataType:'json',
+                    success: function (response) {
+                        //load json data from server and output message
+                        if (response.type == "text") {
+                            $("#feedback").html(response.text);
+                        } else {
+                            $("#feedback").html(response.text);
+
+                        }
+                        $('#myModalrequest').modal('hide')
+
+                    }
+                });
+
+            }
+        });
+
+        });
+
+
+    });
+</script>
+
+
 
 </body>
 </html>

@@ -33,11 +33,16 @@
                 <a href="userhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>
             </li>
             <li>
-                <a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>requset</a>
+                <a  data-toggle="modal" data-target="#myModalrequest"><i class="glyphicon glyphicon-plus"></i>requset</a>
+
             </li>
+
+
+
             <li>
                 <a href="#"><span class="badge">badge</span></a>
             </li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right" style="padding-right: 20px;">
             <li class="dropdown">
@@ -51,5 +56,40 @@
         </ul>
     </nav>
 </div>
+
 <!-- /top nav -->
 <!---------->
+
+<!--Request  Modal -->
+<div class="modal fade" id="myModalrequest" tabindex="-1" role="dialog" aria-labelledby="myModalrequest">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalrequest">Request form</h4>
+            </div>
+            <div class="modal-body">
+
+                <form class=""  id="request_form" action = "" method = "POST" >
+
+                    <div class = "form-group">
+                        <label for="offername">Topic</label>
+                        <input type = "text" id = "topic" name = "topic" class="form-control" placeholder="Topic" />
+                    </div>
+
+                    <div class = "form-group">
+                        <label for="address">commnent</label>
+                        <textarea type = "textarea" rows="5"   id = "comment" name = "comment" class="form-control"  placeholder = "comment"></textarea>
+                    </div>
+
+                    <button type="submit" id="send_request"  style="display:none;"></button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                <button type="submit"   onclick="send_request()" class="btn btn-primary" ">send</button>
+            </div>
+        </div>
+    </div>
+</div>

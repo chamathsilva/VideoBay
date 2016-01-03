@@ -81,6 +81,15 @@ $user =new User();
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!--<script src="../../../library/Jquery/jquery.js"></script>-->
 <script src="../../../public/js/ucscvideobay.js"></script>
+
+<script>
+    $("#feedback_dropdown").load("../../models/fetch_feedback.php");
+
+
+
+</script>
+
+
 </body>
 </html>
 
