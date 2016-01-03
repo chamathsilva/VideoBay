@@ -33,6 +33,7 @@ $user =new User();
     <link rel="stylesheet" href="../../../library/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../library/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../public/css/ucscvideobay.css">
+    <link rel="stylesheet" href="../../../public/css/animate.css">  <!-- meke wadak nathi ewa makala danna -->
 
 
 
@@ -60,6 +61,8 @@ $user =new User();
                         <li><a href="logout.php">Log out</a></li>
                         <li><a href="update.php"> Update details</a></li>
                         <li><a href="changepassword.php">Change password</a></li>
+                        <li><a onclick="test()">Change password</a></li>
+
 
                     </u1>
 
@@ -81,9 +84,32 @@ $user =new User();
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!--<script src="../../../library/Jquery/jquery.js"></script>-->
 <script src="../../../public/js/ucscvideobay.js"></script>
+<script src="../../../public/js/bootstrap-notify.min.js"></script>
 
 <script>
-    $("#feedback_dropdown").load("../../models/fetch_feedback.php");
+
+    function loadfeedback(){
+        $("#feedback_dropdown").empty();
+        $("#feedback_dropdown").prepend('<li class="message-footer"><img style="margin-left:30px;" src="../ajax-loader.gif" /> Loading...</div></li>');
+        $("#feedback_dropdown").load("../../models/fetch_feedback.php");
+    }
+
+    function test(){
+        $.notify("Hello World");
+        $.notify({
+            icon: 'glyphicon glyphicon-star',
+            message: "Everyone loves font icons! Use them in your notification!"},
+        {
+            // settings
+            type: "success",
+            delay: 3000,
+            animate: {
+            enter: 'animated fadeInDown',
+                exit: 'animated fadeOutUp'
+            }
+
+        });
+    }
 
 
 

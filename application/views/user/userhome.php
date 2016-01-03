@@ -49,6 +49,8 @@ $user =new User();
         <!-- Color Box -->
         <link rel="stylesheet" href="../../../public/css/colorbox.css" />
 
+        <link rel="stylesheet" href="../../../public/css/animate.css">
+
 
 
 
@@ -119,7 +121,9 @@ $user =new User();
 
 <script src="../../../public/js/validation_core.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+<script src="../../../public/js/bootstrap-notify.min.js"></script>
 <!--<script type="text/javascript" src="../../../public/slick/slick.min.js"></script>
+
 
 
 
@@ -296,11 +300,8 @@ $user =new User();
             },
 
 
-
             //if form is valid do this
             submitHandler: function(form) {
-
-
 
                 //get input field values data to be sent to server
                 var m_data = new FormData();
@@ -320,9 +321,35 @@ $user =new User();
                     success: function (response) {
                         //load json data from server and output message
                         if (response.type == "text") {
-                            $("#feedback").html(response.text);
+                            //$("#feedback").html(response.text);
+                            $.notify({
+                                    icon: 'glyphicon glyphicon-star',
+                                    message: "Thank you your feedback! Massage not has send"},
+                                {// settings
+                                    type: "success",
+                                    delay: 3000,
+                                    animate: {
+                                        enter: 'animated fadeInDown',
+                                        exit: 'animated fadeOutUp'
+                                    }
+
+                                });
+
                         } else {
-                            $("#feedback").html(response.text);
+                            //$("#feedback").html(response.text);
+                            $.notify({
+                                    icon: 'glyphicon glyphicon-star',
+                                    message: "Thank you your feedback! Massage not has send"},
+                                {
+                                    // settings
+                                    type: "danger",
+                                    delay: 3000,
+                                    animate: {
+                                        enter: 'animated fadeInDown',
+                                        exit: 'animated fadeOutUp'
+                                    }
+
+                                });
 
                         }
                         $('#myModalrequest').modal('hide')
