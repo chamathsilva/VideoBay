@@ -8,6 +8,7 @@ if (isset($_GET['id'])){
 
     //store the last lesson id with the user id
     $user_id =  $_SESSION["user"];
+
     //this will update histroy and recent view lesson
     $temp = $db->insertrecentlesson($id,$user_id);
     //
