@@ -1,11 +1,5 @@
 
 
-<?php
-//<?php $php_timestamp_date = date("d F Y H:i:s", $php_timestamp);
-//echo "".$php_timestamp_date.""; ?>
-?>
-?>
-
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 

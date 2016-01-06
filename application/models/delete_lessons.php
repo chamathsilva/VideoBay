@@ -31,7 +31,7 @@ if($_POST)
             'type'=>'text',
             'text' => '<div class="alert alert-success">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Success!</strong> Indicates a successful or positive action.
+                        <strong>Success!</strong> Deleted Succesfully
                         </div>'
         ));
     }else{
@@ -39,7 +39,7 @@ if($_POST)
             'type'=>'error',
             'text' =>  '<div class="alert alert-danger">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                        <strong>Warning!</strong> Not Any Change Happened
                         </div>'
         ));
     }

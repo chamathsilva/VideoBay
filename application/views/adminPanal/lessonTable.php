@@ -11,7 +11,7 @@
     </thead>
     <tbody >
 
-    <?
+    <?php
     require("../../models/Db.class.php");
     $db = new Db();
     $lessons = $db->query("SELECT * FROM lesson");

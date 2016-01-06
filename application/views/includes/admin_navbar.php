@@ -73,9 +73,6 @@
                 <!--<a href="addLessons.php"><i class="fa fa-fw fa-bar-chart-o"></i> add Lessons</a>-->
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-table"></i> Remove Lessons</a>
-            </li>
-            <li>
                 <a href="../registration/api.php"><i class="fa fa-fw fa-edit"></i>Add Users</a>
             </li>
             <li>
@@ -83,12 +80,9 @@
             </li>
 
             <li>
-                <a href="../adminPanal/manageLessons.php"><i class="fa fa-fw fa-edit"></i>Manage lessons</a>
+                <a href="../adminPanal/manageLessons2.php"><i class="fa fa-fw fa-edit"></i>Manage lessons</a>
             </li>
 
-            <li>
-                <a href="../adminPanal/Deletelessons.php"><i class="fa fa-fw fa-edit"></i>Delete lessons</a>
-            </li>
         </ul>
 
 

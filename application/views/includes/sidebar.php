@@ -13,9 +13,13 @@
     </ul>
 
     <ul class="nav hidden-xs" id="lg-menu">
-        <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
+        <li class="active"><a href="userhome.php"><i class="glyphicon glyphicon-list-alt"></i> My Lessons</a></li>
         <li><a onclick="loadWatchLater()"><i class="glyphicon glyphicon-list"></i> Watch Later</a></li>
+
         <li><a ><i class="glyphicon glyphicon-paperclip"></i> Categories</a></li>
+
+        <!--ajax walin load venna hadanna-->
+        <li><a  href= "history.php"><i class="glyphicon glyphicon-paperclip"></i> History</a></li>
     </ul>
 
 

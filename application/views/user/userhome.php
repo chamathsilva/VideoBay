@@ -93,7 +93,7 @@ $user =new User();
                         </div>
 
                         <div class="col-sm-12 text " id="loadmore" style="margin-bottom: 20px;">
-                            comment: methanat scroll venna hadanna sunimal
+                            <!--comment: methanat scroll venna hadanna sunimal -->
 
                         </div>
                         <!--end of currrent lessons-->
@@ -324,7 +324,7 @@ $user =new User();
                             //$("#feedback").html(response.text);
                             $.notify({
                                     icon: 'glyphicon glyphicon-star',
-                                    message: "Thank you your feedback! Massage not has send"},
+                                    message: "Your massege has send"},
                                 {// settings
                                     type: "success",
                                     delay: 3000,
@@ -339,7 +339,7 @@ $user =new User();
                             //$("#feedback").html(response.text);
                             $.notify({
                                     icon: 'glyphicon glyphicon-star',
-                                    message: "Thank you your feedback! Massage not has send"},
+                                    message: "Thank you your feedback! Massage has not send "},
                                 {
                                     // settings
                                     type: "danger",
