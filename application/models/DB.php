@@ -107,8 +107,9 @@ class DB{
 	//this table update histroy and recent view lesson
 	public function insertrecentlesson($lessonId,$userId){
 		$stmt = $this->_pdo->query('UPDATE recentlesson SET lesson_id = '.$lessonId.' WHERE user_id = '.$userId);
-		$stmt = $this->_pdo->query('INSERT INTO history (lesson_id,user_id,time_stamp) VALUES ('.$lessonId.', '.$userId.', CURRENT_TIMESTAMP) ON DUPLICATE KEY UPDATE `time_stamp` = CURRENT_TIMESTAMP'
-		);
+		$stmt = $this->_pdo->query('INSERT INTO history (lesson_id,user_id,time_stamp) VALUES ('.$lessonId.', '.$userId.', CURRENT_TIMESTAMP) ON DUPLICATE KEY UPDATE `time_stamp` = CURRENT_TIMESTAMP');
+		$stmt = $this->_pdo->query('INSERT INTO viewcount (lesson_ID,v_date,view_count) VALUES('.$lessonId.', CURRENT_TIMESTAMP,1) ON DUPLICATE KEY UPDATE view_count = view_count+1');
+
 		return $stmt;
 	}
 

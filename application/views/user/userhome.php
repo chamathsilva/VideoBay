@@ -75,7 +75,7 @@ $user =new User();
                     ?>
 
                     <!-- new function -->
-                    <div class="full ">
+                    <div class="full">
 
                         <div id="feedback"> </div>
 

@@ -1,0 +1,15 @@
+Time : 19:49:23
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS VIEWS = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount WHER' at line 1
+Raw SQL : IF NOT EXISTS VIEWS = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 19:48:42
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS viewcount = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount ' at line 1
+Raw SQL : IF NOT EXISTS viewcount = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 19:48:13
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS viewcount = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount ' at line 1
+Raw SQL : IF NOT EXISTS viewcount = 0 ELSE SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 09:41:38
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
