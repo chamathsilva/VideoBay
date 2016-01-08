@@ -29,8 +29,12 @@ function countView($lessonid,$days,$dbnew){
 }
 
 
+//fix as single query
+
 $statmant = $db->query("SELECT lesson_id FROM lesson");
 $statmentname = $db->query("SELECT name FROM lesson");
+
+
 $data_array  = array();
 foreach ($statmant as $lesson ){
     $data_array[] = $lesson['lesson_id'];

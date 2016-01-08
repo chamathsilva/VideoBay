@@ -68,7 +68,6 @@ $user =new User();
                             <img style="margin-left:30px;" src="../ajax-loader.gif">
                             Loading...
                         </div>
-
                     </div>
                     <!--
                     <u1>

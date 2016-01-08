@@ -1,0 +1,19 @@
+Time : 21:54:39
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 21:50:46
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 21:50:34
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 21:48:11
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
+
+Time : 21:48:07
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_user.viewcount' doesn't exist
+Raw SQL : SELECT SUM(view_count) AS VIEWS FROM viewcount WHERE lesson_id = :id and v_date<=:tday and v_date >:lastday
