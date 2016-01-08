@@ -19,7 +19,7 @@
     <nav class="collapse navbar-collapse" role="navigation">
 
         <form class="navbar-form navbar-left" id = "search-form">
-            <div class="input-group input-group-sm" id = "search-form" style="max-width:360px;">
+            <div class="input-group input-group-sm" id = "search-form" >
                 <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
                 <div class="input-group-btn">
                     <button id="serchbut" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
@@ -34,11 +34,7 @@
             </li>
             <li>
                 <a  data-toggle="modal" data-target="#myModalrequest"><i class="glyphicon glyphicon-plus"></i>requset</a>
-
             </li>
-
-
-
             <li>
                 <a href="#"><span class="badge">badge</span></a>
             </li>

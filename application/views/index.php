@@ -22,9 +22,11 @@ $pages = ceil($get_total_rows[0]/$item_per_page);
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="../../library/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../library/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="../../library/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../public/css/form-elements.css">
         <link rel="stylesheet" href="../../public/css/ucscvideobay.css">
+
 
          <!-- Color Box -->
         <!--<link rel="stylesheet" href="../../public/css/colorbox.css" />-->
@@ -71,14 +73,15 @@ UCSS VideoBay is a web based system which creates a learning environment for the
                 </div>
             </div>
         </div>
-
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+        <script src="//netdna.bootstraocdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+
         <script src="../../public/js/ucscvideobay.js"></script>
         <!--<script src="../../public/js/jquery.colorbox.js"></script>-->
 
-        
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+
+
         <script src="../../public/js/validation.js"></script>
 
 
@@ -97,6 +100,11 @@ UCSS VideoBay is a web based system which creates a learning environment for the
                     $("#results").prepend('<div class="loading-indication"><img src="ajax-loader.gif" /> Loading...</div>');
                     $("#results").load("../models/fetch_pages.php", {'page':num});
                 });
+
+
+
+
+
 
             });
         </script>

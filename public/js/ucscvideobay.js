@@ -35,6 +35,7 @@ $(document).ready(function(){
     });
 
 
+
     $(function() {
         $('#adminNav li a').click(function() {
             $('#adminNav li').removeClass();

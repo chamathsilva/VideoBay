@@ -85,7 +85,6 @@ else{
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
 
-
             <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
 
                 <!-- side bar -->
@@ -98,19 +97,6 @@ else{
 
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li style="padding-left: 40px;">Main Topics</li>
-
-                    <?php
-                    while ($row = $topics->fetch(PDO::FETCH_ASSOC)) {
-                        $start_time = $row['start_time'];
-                        $topic = $row['sub_title'];
-                        ?>
-                        <li>
-                            <a  onclick="setCurTime(<?php echo $start_time; ?>)"><?php echo $topic; ?> : <?php echo floor($start_time/60); ?>min</a>
-                        </li>
-
-                        <?php
-                        }
-                    ?>
                 </ul>
 
                 <ul class="nav hidden-xs">

@@ -63,13 +63,14 @@ $user =new User();
                         </li>
                     </ol>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <div id="graph">
                             <img style="margin-left:30px;" src="../ajax-loader.gif">
                             Loading...
                         </div>
 
                     </div>
+                    <!--
                     <u1>
                         <li><a href="logout.php">Log out</a></li>
                         <li><a href="update.php"> Update details</a></li>
@@ -77,7 +78,7 @@ $user =new User();
                         <li><a onclick="test()">Change password</a></li>
 
                     </u1>
-
+                    -->
 
 
 
@@ -106,7 +107,7 @@ $user =new User();
 
 
 <script>
- 
+
    $("#graph").load("../../models/graph_data.php");
 
     function loadfeedback(){
