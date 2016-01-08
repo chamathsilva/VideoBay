@@ -68,7 +68,6 @@
                                 </div>'
         ;
 
-
         echo '<tr>';
         echo '<td>' . $temp . '</td>';
         echo '<td>' . $name . '</td>';

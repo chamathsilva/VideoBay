@@ -39,6 +39,8 @@
 <form  style="background-color: #ffffff" method="POST" action="" id="contact-form" class="form-horizontal" >
 
     <!-- Checkbox -->
+
+
     <div class="control-group">
         <label class="control-label" for="audience">Select audience(Select all that apply)</label>
         <div>
@@ -48,6 +50,9 @@
             <br>
         </div><!-- close controls -->
     </div> <!-- close control group -->
+
+
+
 
     <!-- Checkbox -->
     <div class="control-group">
