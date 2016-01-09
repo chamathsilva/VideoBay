@@ -97,18 +97,11 @@ $user =new User();
 
                         </div>
                         <!--end of currrent lessons-->
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
 
 
@@ -123,11 +116,6 @@ $user =new User();
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="../../../public/js/bootstrap-notify.min.js"></script>
 <!--<script type="text/javascript" src="../../../public/slick/slick.min.js"></script>
-
-
-
-
-
 
 <!--<script src="../../../../../UCSCpresent/new/js/scripts.js"></script>-->
 
